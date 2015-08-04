@@ -1,4 +1,38 @@
 Rails.application.routes.draw do
+  get 'coupons/index'
+
+  get 'coupons/edit'
+
+  get 'coupons/new'
+
+  get 'coupons/show'
+
+  get 'kudos/index'
+
+  get 'kudos/edit'
+
+  get 'kudos/new'
+
+  get 'kudos/show'
+
+  get 'resets/edit'
+
+  get 'resets/new'
+
+  get 'sessions/login'
+
+  get 'sessions/signup'
+
+  get 'sessions/landing'
+
+  get 'users/index'
+
+  get 'users/new'
+
+  get 'users/show'
+
+  get 'users/edit'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
