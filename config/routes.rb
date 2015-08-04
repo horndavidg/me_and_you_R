@@ -1,37 +1,37 @@
 Rails.application.routes.draw do
-  get 'coupons/index'
+  
+  root "sessions#landing"
 
-  get 'coupons/edit'
+  get 'login', to: "sessions#login", as: "login"
+  get 'signup', to: "sessions#signup", as: "signup"
+  post 'login', to: "sessions#attempt_login"
+  delete 'logout', to: "sessions#logout", as: "logout"
 
-  get 'coupons/new'
+  resources :resets, only: [:new, :edit, :create, :update]
 
-  get 'coupons/show'
+  # resources :users, only: [:index,:destroy,:update]
+  # resources :users, except: [:new,:destroy]
 
-  get 'kudos/index'
+  resources :users do 
 
-  get 'kudos/edit'
+     resources :kudos
 
-  get 'kudos/new'
+  end
 
-  get 'kudos/show'
+   resources :coupons
 
-  get 'resets/edit'
 
-  get 'resets/new'
 
-  get 'sessions/login'
 
-  get 'sessions/signup'
 
-  get 'sessions/landing'
 
-  get 'users/index'
 
-  get 'users/new'
 
-  get 'users/show'
 
-  get 'users/edit'
+
+
+end
+# --------------------------------------------------
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -87,4 +87,3 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
