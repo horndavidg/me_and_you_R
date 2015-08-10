@@ -1,0 +1,9 @@
+/* Skin: Light Green */
+
+@import "modules/breakpoints";
+@import "modules/mixins";
+
+$accent-color: #8AA026;
+$link-hover-color: darken($accent-color, 8%);
+
+@import "_skin-styles";

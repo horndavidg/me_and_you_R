@@ -1,0 +1,37 @@
+/*
+*	############################################################################
+*	
+*	Repute One-Page - Responsive Multipurpose Bootstrap Theme
+*	---------------------------------------------------------------------
+*
+*	Version		1.0
+*	Author		The Develovers
+*	Copyright	Copyright 2015 The Develovers
+*
+*	############################################################################
+*/
+
+// import general styles and variables
+@import "partials/base";
+@import "partials/general";
+
+// import third-party
+@import "vendors/slick.custom";
+@import "vendors/animate";
+
+// import web elements
+@import "partials/navbar";
+@import "partials/hero-unit";
+@import "partials/ui-bootstrap-elements";
+@import "partials/ui-elements";
+@import "partials/portfolio";
+@import "partials/typography";
+
+// import elements available on pages
+@import "partials/pages";
+
+// import helper classes
+@import "partials/helpers";
+
+// import one-page specific styles
+@import "partials/one-page";

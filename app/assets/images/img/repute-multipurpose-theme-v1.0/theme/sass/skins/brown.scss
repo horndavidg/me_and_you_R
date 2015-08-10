@@ -1,0 +1,13 @@
+/* Skin: Brown */
+
+@import "modules/breakpoints";
+@import "modules/mixins";
+
+$accent-color: #CD853F;
+$link-hover-color: darken($accent-color, 8%);
+
+@import "_skin-styles";
+
+
+
+

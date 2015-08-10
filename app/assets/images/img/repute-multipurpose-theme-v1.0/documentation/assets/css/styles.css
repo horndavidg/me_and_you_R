@@ -1,0 +1,78 @@
+/* Documentation Styles */
+
+header {
+	text-align: center;
+	margin: 50px 0 30px 0;
+}
+
+header h1 {
+	font-size: 1.5em;
+}
+
+hr {
+	margin: 10px 0;
+	border-color: #ccc;
+}
+
+.logo {
+	display: inline;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.header-info {
+	margin-bottom: 30px;
+	padding: 20px;
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	
+}
+
+.doc-section {
+	margin-bottom: 50px;
+}
+
+.doc-sidebar {
+	top: 20px;
+	width: 250px;
+}
+
+.doc-sidebar .nav > li > a {
+	display: block;
+	padding: 5px 20px;
+	border-left: 3px solid transparent;
+}
+
+.doc-sidebar .nav .nav {
+	display: none;
+	margin-bottom: 8px;
+}
+
+.doc-sidebar .nav .nav > li > a {
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 30px;
+	font-size: 90%;
+	border-left-width: 1px;
+}
+
+.doc-sidebar .nav > .active > a,
+.doc-sidebar .nav > .active:hover > a,
+.doc-sidebar .nav > .active:focus > a {
+	font-weight: bold;
+	border-left-color: #428BCA;
+}
+
+.doc-sidenav {
+	background: #F5F7FA;
+}
+
+.well-changelog {
+	background-color: #ededed;
+}
+
+@media (min-width: 992px) {
+	.doc-sidebar .nav > .active > ul {
+		display: block;
+	}
+}

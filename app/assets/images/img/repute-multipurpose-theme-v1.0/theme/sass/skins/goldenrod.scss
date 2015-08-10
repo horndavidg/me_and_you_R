@@ -1,0 +1,12 @@
+/* Skin: Golden Rod */
+
+@import "modules/breakpoints";
+@import "modules/mixins";
+
+$accent-color: #DAA520;
+$link-hover-color: darken($accent-color, 8%);
+
+@import "_skin-styles";
+
+
+

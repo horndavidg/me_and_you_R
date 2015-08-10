@@ -1,0 +1,45 @@
+/* ----------------------------------------------------- */
+/* HELPERS
+/* ----------------------------------------------------- */
+
+.inline-img {
+	float: left;
+	margin: 0 10px 10px 0;
+	width: 50%;
+}
+
+.no-margin {
+	margin: 0 !important;
+}
+
+.no-padding {
+	padding: 0 !important;
+}
+
+.margin-bottom-30px {
+	margin-bottom: 30px !important;
+}
+
+.margin-bottom-50px {
+	margin-bottom: 50px !important;
+}
+
+.body-text-bg {
+	background-color: $body-text-color !important;
+}
+
+/* list icons */
+.list-icons-demo li {
+	margin-bottom: 20px;
+
+	i {
+		font-size: 24px;
+	}
+}
+
+@include max-screen($break-xsmall) {
+	.inline-img {
+		float: none;
+		width: 100%;
+	}
+}
