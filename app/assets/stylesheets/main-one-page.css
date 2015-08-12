@@ -303,7 +303,7 @@ hr {
 }
 
 .slick-loading .slick-list {
-  background: #fff url("../img/bx_loader.gif") center center no-repeat;
+  background: #fff url("./bx_loader.gif") center center no-repeat;
 }
 
 .slick-list.dragging {
