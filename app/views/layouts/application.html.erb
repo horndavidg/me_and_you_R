@@ -11,41 +11,47 @@
 </head>
 <body>
 
- <nav id="mainNav" class="navbar navbar-default">
+
+<!-- Custom Navbar -->
+
+ <nav id="mainNav" class="navcolor navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-        <%= link_to "Me & You", root_path, class:"navbar-brand" %>
+       <%= link_to "Me & You", root_path, class:"navbar-brand link_color" %>
       </div>
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
 
           <% if @current_user == nil %>
-              <li><%= link_to "Login", login_path %></li>
+              <li><%= link_to "Login", login_path, {:style => 'color: white'} %></li>
           <% end %>   
         </ul>
-
-
-
-
         <ul class="nav navbar-nav navbar-right">
           <% if @current_user %>
             <li><p class="navbar-text"><span class="white">Signed in as
-
-
-
-
             <%= link_to "#{@current_user.email}", user_path(@current_user)%></li>
             <li><%= link_to "Log Out", logout_path %></li>
           <% else %>
-            <li><%= link_to "Login Please", login_path %></li>
+            <li><%= link_to "Login Please", login_path, {:style => 'color: white'} %></li>
           <% end %>
         </ul>
       </div>
     </div>
   </nav>
 
+<!--   End Navbar -->
+
+
+<!-- Page Content -->
+
 <%= yield %>
+
+<!-- End Page Content -->
+
+  <%= render partial: 'shared/footer' %>
+
+  <%= render partial: 'shared/end_javascript' %>
 
 </body>
 </html>
