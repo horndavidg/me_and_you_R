@@ -1,0 +1,76 @@
+/* --------------*/
+/* TYPOGRAPHY 
+/* -------------*/
+
+.text-body-color {
+	color: $body-text-color !important;
+}
+
+.text-white-color {
+	color: #fff;
+}
+
+.text-dashed {
+	border-bottom: 1px dashed $body-text-color;
+}
+
+.text-accent-color {
+	color: $accent-color;
+}
+
+.dropcap {
+	float: left;
+	min-width: 31px;
+	padding: 5px 0;
+	margin: 5px 8px 0 0;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 21px;
+	text-align: center;
+	background-color: $accent-color;
+	color: #FFF;
+
+	&.dropcap-big {
+		min-width: 50px;
+		padding: 8px 0;
+		margin: 5px 10px 0 0;
+		font-size: 36px;
+		font-weight: 400;
+		line-height: 36px;
+	}
+}
+
+.list-iconed i {
+	font-size: 15px;
+}
+
+.heading-center {
+	text-align: center;
+	margin-bottom: 50px;
+
+	.section-heading {
+		font-size: 40px;
+		margin-bottom: 0;
+	}
+
+	hr {
+		width: 80px;
+		margin-top: 40px;
+		border-color: $accent-color;
+	}
+}
+
+.contact-info.contact-half {
+	margin-left: 2.5em;
+
+	li {
+		font-size: 18px;
+		margin-bottom: 30px;
+	}
+
+	i {
+		font-size: 21px;
+		line-height: 21px;
+	}
+}
+

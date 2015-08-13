@@ -1,0 +1,36 @@
+/* ----------------------------------------------------- */
+/* ONE PAGE
+/* One-page specific styles
+/* ----------------------------------------------------- */
+
+.heading-center .section-heading {
+	margin-top: 25px;
+	margin-bottom: 5px;
+
+	&:after {
+		display: none;
+	}
+}
+
+.back-to-top {
+	display: none;
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	z-index: 9999;
+	
+	a {
+		display: block;
+		width: 35px;
+		height: 35px;
+		color: #FFF;
+		line-height: 35px;
+		text-align: center;
+		background-color: rgba(0, 0, 0, 0.3);
+	}
+}
+
+.multiple-pricing-table {
+	margin-top: 90px;
+}
+

@@ -1,0 +1,533 @@
+/*------------------------------------------------*/
+/*	Page: FAQ
+/*------------------------------------------------*/
+
+.panel-group-faq {
+	margin-bottom: 60px;
+
+	.panel-heading {
+		padding-left: 0;
+	}
+
+	.panel-minimal .panel-heading + .panel-collapse > .panel-body {
+		margin-top: 0;
+	}
+
+	.panel-title {
+		font-family: inherit;
+		font-size: 16px;
+		line-height: 1.6;
+	}
+
+	.panel-body {
+		padding-left: 0;
+	}
+
+	&.top-faq {
+		.panel-heading {
+			padding: 15px 0;
+
+			.number {
+				@include border-radius(50%);
+				@include inline-block;
+
+				width: 30px;
+				height: 30px;
+				margin-right: 10px;
+				color: #fff;
+				line-height: 1.6;
+				text-align: center;
+				background-color: $accent-color;
+			}
+		}
+		
+		.panel-title {
+			font-size: 18px;
+		}
+		.panel-body {
+			padding-left: 40px; 
+		}
+	}
+}
+
+.faq-footer {
+	position: relative;
+	margin-top: 15px;
+	padding: 5px 8px;
+	background-color: #e7e7e7;
+	font-size: 11px;
+
+	.share {
+		@include inline-block;
+
+		position: absolute;
+		right: 8px;
+	}
+
+	@include max-screen($break-small) {
+		font-size: 13px;
+
+		.share {
+			display: block;
+			position: relative;
+			right: 0;
+		}
+	}
+}
+
+.faq-further-links-list {
+	margin: 30px 0;
+
+	> li {
+		width: 20em;
+	}
+}
+
+
+/*------------------------------------------------*/
+/*	Page: Search Results
+/*------------------------------------------------*/
+
+.page-search-result {
+	h2 {
+		font-size: 1.8em;
+		margin-bottom: 30px;
+		margin-top: 0;
+
+		.search-result-info {
+			font-size: 0.5em;
+		}
+	}
+
+	ul.list-results {
+		li {
+			margin: 30px 0;
+
+			h3 {
+				margin: 0;
+				font-size: 1.5em;
+
+				a:hover, a:focus {
+					text-decoration: underline;
+				}
+			}
+
+			.result-url {
+				color: #008000;
+			}
+
+			p {
+				margin-bottom: 0;
+			}
+
+			&.type-document i {
+				font-size: 6em;
+				line-height: 1;
+			}
+
+			&.type-image img {
+				width: 140px;
+
+				@include max-screen($break-xsmall) {
+					width: 110px;
+				}
+			}
+
+			&.type-portfolio img {
+				width: 150px;
+			}
+		}
+	}
+}
+
+/*------------------------------------------------*/
+/*	Page: Pricing Tables
+/*------------------------------------------------*/
+
+.multiple-pricing-table {
+	text-align: center;
+	
+	.plan-heading {
+		margin-bottom: 50px;
+
+		h4 {
+			font-size: 28px;
+		}
+	}
+
+	.pricing-badge {
+		background: {
+			image: image-url("badge.png");
+			repeat: no-repeat;
+		}
+
+		width: 100px;
+		height: 100px;
+		margin: 0;
+		position: absolute;
+		top: -3em;
+		right: -1em;
+
+		span {
+			position: relative;
+			top: 27px;
+			font-size: 19px;
+			color: #fff;
+			text-align: center;
+			line-height: 1.3;
+		}
+	}
+
+	.pricing-item {
+		@include border-radius(2px);
+
+		padding: 50px 20px;
+		margin: 0 15px 30px 15px;
+		border: 1px solid #ccc;
+		background: #fff;
+
+		.plan-icon {
+			@include border-radius(50%);
+
+			display: block;
+			width: 100px;
+			height: 100px;
+			margin: 0 auto;
+			margin-bottom: 15px;
+			font-size: 48px;
+			background: #ccc;
+
+			&:before {
+				line-height: 100px;
+			}
+		}
+
+		.price {
+			display: block;
+			font-size: 28px;
+			line-height: 2.3;
+			font-weight: normal;
+
+			.number {
+				font-size: 5em;
+				font-weight: 700;
+				padding-left: 25px;
+			}
+
+			.duration {
+				font-size: 0.7em;
+			}
+		}
+
+		.plan-detail-list {
+			margin-bottom: 30px;
+			margin-top: 10px;
+		}
+	}
+
+	@include max-screen($break-medium) {
+		.pricing-item {
+			margin-left: 0;
+			margin-right: 0;
+			padding: 50px 5px 30px 5px;
+		}
+	}
+
+	@include max-screen($break-small) {
+		.pricing-badge {
+			top: -2em;
+			right: 0;
+		}
+	}
+}
+
+.single-pricing-table {
+	text-align: center;
+
+	.plan-heading {
+		font-size: 28px;
+	}
+	
+	.plan-content {
+		width: 80%;
+		margin: 40px auto;
+		padding: 30px;
+		border-top: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+		background: #fff;
+	}
+
+	.price {
+		font-size: 22px;
+		line-height: 2.3;
+		font-weight: normal;
+
+		.currency {
+			position: absolute;
+			top: 57px;
+			font-size: 2em;
+		}
+
+		.number {
+			font-size: 5em;
+			font-weight: 700;
+			padding-left: 25px;
+		}
+
+		.duration {
+			margin-left: -20px;
+		}
+	}
+
+	.plan-detail-list {
+		text-align: left;
+		margin-bottom: 20px;
+
+		> li {
+			margin-bottom: 10px;
+
+			i {
+				color: #7bae16;
+				margin-right: 5px;
+			}
+		}
+	}
+
+	.btn {
+		strong {
+			display: block;
+			margin-bottom: 5px;
+			font-weight: normal;
+			font-size: 24px;
+		}
+		
+		span {
+			display: block;
+			font-size: 0.7em;
+			color: lighten($accent-color, 20%);
+		}
+	}
+
+	@include max-screen($break-small) {
+		.plan-content {
+			width: 100%;
+		}
+		
+		.price {
+			font-size: 18px;
+			line-height: 1.6;
+		}
+	}
+
+	@include max-screen($break-xsmall) {
+		.plan-detail-list {
+			text-align: center;
+		}
+	}
+}
+
+
+/*------------------------------------------------*/
+/*	Page: Error Page
+/*------------------------------------------------*/
+
+.page-error {
+	padding: 2em 0 6em 0;
+
+	h1 {
+		font-size: 12em;
+		line-height: 1;
+	}
+}
+
+
+/*------------------------------------------------*/
+/*	Page: Suppport
+/*------------------------------------------------*/
+
+.form-knowledge-search {
+	margin-bottom: 50px;
+
+	@include max-screen($break-xsmall) {
+		input[type="search"] {
+			font-size: 0.9em;
+		}
+	}
+}
+
+.knowledge {
+	h2 {
+		border-bottom: 1px solid #ccc;
+		line-height: 30px;
+		font-size: 20px;
+
+		span {
+			font-weight: normal;
+		}
+
+		a {
+			text-decoration: none;
+		}
+	}
+
+	ul {
+		li {
+			line-height: 30px;
+
+			a {
+				color: $body-text-color;
+				display: block;
+				padding-left: 20px; 
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+
+			i {
+				font-size: 14px;
+				line-height: 29px;
+			}
+		}
+	}
+}
+
+.knowledge-recent-popular {
+	margin-top: 50px;
+
+	ol {
+		padding-left: 20px;
+		li {
+			line-height: 30px; 
+		}
+	}
+}
+
+ul.nav-categories {
+	margin-bottom: 30px;
+
+	> li {
+		border: 1px solid #ccc;
+
+		&:first-child {
+			@include border-top-radius(2px);
+		}
+
+		&:last-child {
+			@include border-bottom-radius(2px);
+		}
+
+		&:not(:first-child) {
+			border-top: none;
+		}
+
+		+ li {
+			margin-top: 0;
+		}
+
+		> a {
+			@include border-radius(0);
+
+			color: $body-text-color;
+
+			&:hover {
+				background-color: #e6e6e6;
+			}
+		}
+	}
+}
+
+.ticket-box {
+	@include border-radius(2px);
+
+	border: 1px solid #ccc;
+	padding: 15px;
+}
+
+
+/*------------------------------------------------*/
+/*	Page: Contact Us
+/*------------------------------------------------*/
+
+.contact-info {
+	margin-left: 1.7em;
+
+	> li {
+		margin-bottom: 8px;
+	}
+}
+
+.sidebar-map > div {
+	height: 260px;
+}
+
+
+/*------------------------------------------------*/
+/*	Page: About Us
+/*------------------------------------------------*/
+
+.team-member {
+	margin-bottom: 60px;
+
+	&.media > .pull-left {
+		margin-right: 30px;
+		padding-right: 0;
+	}
+
+	.team-name {
+		@include inline-block;
+
+		padding: 0 5px;
+		line-height: 1.6;
+		color: #fff;
+		background-color: $accent-color;
+	}
+
+	strong {
+		display: block;
+		font-size: 0.9em;
+	}
+
+	hr {
+		width: 50px;
+		border-top: 1px solid #ccc;
+		margin-top: 10px;
+		margin-left: 0;
+	}
+
+	.social-icon > li {
+		padding-right: 12px;
+
+		> a {
+			color: #989898;
+			font-size: 18px;
+
+			&:hover, &:focus {
+				color: darken(#989898, 12%);
+			}
+		}
+	}
+
+	@include max-screen($break-xsmall) {
+		text-align: center;
+		
+		&.media > .pull-left {
+			display: inline;
+			float: none !important;
+			margin-bottom: 20px;
+			margin-right: 0;
+		}
+
+		hr {
+			margin: 20px auto;
+			float: none !important;
+		}
+	}
+}
+
+@include max-screen($break-xsmall) {
+	.team {
+		padding-bottom: 0;
+	}
+}
+

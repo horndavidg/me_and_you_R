@@ -1,0 +1,10 @@
+/* Skin: Indian Red */
+
+@import "modules/breakpoints";
+@import "modules/mixins";
+
+$accent-color: #CD5C5C;
+$link-hover-color: darken($accent-color, 8%);
+
+@import "_skin-styles";
+

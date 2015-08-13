@@ -1,0 +1,24 @@
+// BASE
+
+// import compass
+@import "compass/css3";
+@import "compass/typography/lists/inline-block-list";
+@import "modules/breakpoints";
+@import "modules/mixins";
+
+// fonts
+$heading-font-family: "Roboto Condensed", sans-serif; // imported from google font
+$base-font-family: "Open Sans", sans-serif; // imported from google font
+$heading-text-color: #474747;
+$body-text-color: #4a4a4a;
+
+// colors
+$accent-color: #406da4;
+$link-color: $accent-color;
+$link-hover-color: darken($link-color, 8%);
+$facebook-color: #3b59ab;
+$twitter-color: #2b97f0;
+$googleplus-color: #dd4b39;
+$rss-color: #ff6600;
+$footer-bg-color: #49494b;
+

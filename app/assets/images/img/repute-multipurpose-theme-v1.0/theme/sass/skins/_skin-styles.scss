@@ -1,0 +1,399 @@
+// -----------------------------------------------------
+// SKIN STYLES TEMPLATE
+// This file should be imported in each skin file
+// -----------------------------------------------------
+
+a {
+	color: $accent-color;
+
+	&:hover, &:focus {
+		color: $link-hover-color;
+	}
+}
+
+.btn-primary {
+	background-color: $accent-color;
+	border-color: darken($accent-color, 3%);
+
+	&:hover, &:focus, &.focus, &:active, &.active, 
+	.open > .dropdown-toggle.btn-primary {
+		background-color: darken($accent-color, 3%);
+		border-color: darken($accent-color, 8%);
+	}
+}
+
+.navbar-toggle {
+	background-color: $accent-color;
+}
+
+.navbar-default .navbar-toggle {
+	&:hover, &:focus {
+		background-color: darken($accent-color, 8%);
+	}
+}
+
+.navbar-nav .dropdown-menu {
+	border-top: 2px solid darken($accent-color, 10%);
+}
+
+.navbar-default .navbar-nav {
+	> li > a {
+		&:hover, &:focus {
+			color: $link-hover-color;
+		}
+	}
+
+	> .active > a,
+	> .active > a:hover,
+	> .active > a:focus {
+		color: $link-hover-color;
+	}
+
+	> .open > a,
+	> .open > a:hover,
+	> .open > a:focus {
+		color: $link-hover-color;
+	}
+}
+
+@include max-screen($break-medium) {
+	.navbar-default .navbar-nav {
+		> .active > a, > .active > a:hover, > .active > a:focus,
+		> .active.open > a, > .active.open > a:hover, > .active.open > a:focus {
+			background-color: $accent-color;
+			color: #fff;
+		}
+	}
+}
+
+.hero-unit-animated .hero-button {
+	background-color: $accent-color;
+
+	&:hover, &:focus {
+		background-color: darken($accent-color, 3%);
+	}
+}
+
+.hero-unit-slider .hero-button {
+	&:hover, &:focus {
+		background: $accent-color;
+		color: #fff;
+	}
+}
+
+.boxed-content {
+	> i {
+		color: $accent-color;
+	}
+
+	&.left-boxed-icon i {
+		background: $accent-color;
+	}
+}
+
+.section-heading:after {
+	color: $accent-color;
+}
+
+.full-width-section {
+	background-color: $accent-color;
+}
+
+/* latest news */
+.news-item a {
+	&:hover, &:focus {
+		color: $accent-color;
+	}
+}
+
+/* blog list */
+.blog {
+	.entry-title a {
+		&:hover, &:focus {
+			color: $accent-color;
+		}
+	}
+
+	.meta-line a {
+		&:hover, &:focus {
+			color: $accent-color;
+		}
+	}
+}
+
+.tag-list li a {
+	background-color: $accent-color;
+}
+
+.category-list li a {
+	&:hover, &:focus {
+		color: $accent-color;
+	}
+}
+
+.panel-group-faq.top-faq .panel-heading .number {
+	background-color: $accent-color;
+}
+
+.team-member .team-name {
+	background-color: $accent-color;
+}
+
+.portfolio-item {
+	.overlay {
+		background-color: rgba($accent-color, 0.9);
+	}
+
+	.btn {
+		background-color: lighten($accent-color, 3%);
+		border: 1px solid darken($accent-color, 5%);
+
+		&:hover, &:focus {
+			background-color: $accent-color;
+		}
+	}
+}
+
+.portfolio-item-filters li a {
+	&:hover, &:focus {
+		color: $accent-color;
+	}
+
+	&.active {
+		background-color: $accent-color;
+	}
+}
+
+/* tabs */
+.nav-tabs {
+	@include max-screen($break-xsmall) {
+		> li.active {
+			> a, > a:hover, > a:focus {
+				background-color: $accent-color;
+			}
+		}
+	}
+}
+
+.nav-pills {
+	> li {
+		&.active > a, &.active > a:hover, &.active > a:focus {
+			background-color: $accent-color;
+		}
+	}
+}
+
+.custom-tabs-line {
+	&.tabs-line-top .active a {
+		border-top-color: $accent-color;
+	}
+
+	&.tabs-line-bottom .active a {
+		border-bottom: 1px solid $accent-color;
+	}
+}
+
+.pagination {
+	> li > a,
+	> li > span {
+		color: $accent-color;
+	}
+
+	> li {
+		@include pagination-button-color($accent-color);
+	}
+
+	> .active {
+		> a, > span {
+			background-color: $accent-color;
+			border-color: darken($accent-color, 5%);
+		}
+	}
+}
+
+
+.pagination.borderless > li {
+	&.active {
+		> a,
+		> span {
+			background-color: $accent-color;
+
+			&:hover,
+			&:focus {
+				background-color: $accent-color;
+			}
+		}
+	}
+}
+
+.pager {
+	li > a {
+		&:hover, &:focus {
+			background-color: $accent-color;
+			border-color: darken($accent-color, 3%);
+		}
+	}
+}
+
+.slick-next,
+.slick-prev {
+	background-color: $accent-color;
+
+	&:hover, &:focus {
+		background-color: darken($accent-color, 5%);
+	}
+}
+
+.newsletter-form {
+	.input-group-lg {
+		> .input-group-btn > .btn {
+			background-color: $accent-color;
+
+			&:hover, &:focus {
+				background-color: darken($accent-color, 5%);
+			}
+		}
+	}
+}
+
+ul.sidebar-nav {
+	li {
+		a {
+			&:hover {
+				color: $accent-color;
+			}
+
+			&.current a {
+				color: $accent-color;
+			}
+		}
+
+		&.current a {
+			color: $accent-color;
+		}
+	}
+
+	li.has-submenu {
+		&.active {
+			> a,
+			li.active > a {
+				color: $accent-color;
+			}
+		}
+	}
+}
+
+.breadcrumb {
+	> li {
+		&.active {
+			color: $accent-color;
+		}
+	}
+
+	a {
+		&:hover, &:focus {
+			color: $accent-color;
+		}
+	}
+
+	&.link-accent {
+		a {
+			color: $accent-color;
+
+			&:hover, &:focus {
+				color: $link-hover-color;
+			}
+		}
+	}
+}
+
+.fancy-checkbox {
+	input[type="checkbox"] {
+		&:checked + span:before {
+			background: $accent-color;
+			border: 1px solid $accent-color;
+		}
+	}
+}
+
+.fancy-radio {
+	input[type="radio"] {
+		&:checked + span i:after {
+			background-color: $accent-color;
+		}
+	}
+}
+
+/* switch checkbox and radio */
+.switch-input {
+	input {
+		&:checked + i {
+			border-color: $accent-color;
+		}
+	}
+
+	i {
+		&:before {
+			background-color: $accent-color;
+		}
+	}
+}
+
+.single-pricing-table .btn span {
+	color: lighten($accent-color, 20%);
+}
+
+.text-accent-color {
+	color: $accent-color;
+}
+
+/* date picker */
+.datepicker {
+	td.active {
+		&:active, &.active {
+			background-color: $accent-color;
+			border-color: darken($accent-color, 10%);
+		}
+
+		&:hover {
+			&:active, &.active {
+				background-color: $accent-color;
+				border-color: darken($accent-color, 10%);
+			}
+		}
+	}
+
+	table tr td.active {
+		&:hover, &:hover:hover, &.disabled:hover, &.disabled:hover:hover, &:active, &:hover:active,
+		&.disabled:active, &.disabled:hover:active, &.active, &:hover.active, &.disabled.active,
+		&.disabled:hover.active, &.disabled, &:hover.disabled, &.disabled.disabled, &.disabled:hover.disabled,
+		[disabled], &:hover[disabled], &.disabled[disabled], &.disabled:hover[disabled] {
+			background-color: $accent-color;
+			border-color: darken($accent-color, 10%);
+		}
+	}
+}
+
+/* date range picker */
+.daterangepicker {
+	td {
+		&.active, &.active:hover {
+			background-color: $accent-color;
+			border-color: darken($accent-color, 10%);
+		}
+
+		&.in-range {
+			background: lighten($accent-color, 38%);
+		}
+	}
+}
+
+.dropcap {
+	background-color: $accent-color;
+}
+
+.testimonial-fancy {
+	i {
+		color: $accent-color;
+	}
+}

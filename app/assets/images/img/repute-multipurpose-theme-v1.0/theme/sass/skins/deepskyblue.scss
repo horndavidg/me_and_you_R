@@ -1,0 +1,12 @@
+/* Skin: Deep Sky Blue */
+
+@import "modules/breakpoints";
+@import "modules/mixins";
+
+$accent-color: #00BFFF;
+$link-hover-color: darken($accent-color, 8%);
+
+@import "_skin-styles";
+
+
+
