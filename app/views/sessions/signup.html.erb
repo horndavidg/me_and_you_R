@@ -1,2 +1,29 @@
-<h1>Sessions#signup</h1>
-<p>Find me in app/views/sessions/signup.html.erb</p>
+<div class="col-sm-offset-3 auth_box">
+  <div class="col-sm-7">
+    <div class="well">
+     <h2 class="text-center font_lg">Sign Up for Me & You</h2><br>
+      <%= form_for @user, url: signup_path do |f| %>
+        <%= render partial: "shared/errors", locals:{instance: @user} %>
+        <div class="form-group">
+          <%= f.label :name, class:"control-label" %>
+          <%= f.text_field :name, class:"form-control" %>
+        </div>
+           <div class="form-group">
+          <%= f.label :email, class:"control-label" %>
+          <%= f.text_field :email, class:"form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :picture, class:"control-label" %>
+          <%= f.text_field :picture, class:"form-control", placeholder:"URL Please (optional)" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :password, class:"control-label" %>
+          <%= f.password_field :password, class:"form-control" %>
+        </div>
+
+        <%= f.submit "Signup", id:"submit-user", class:"btn btn-block btn-success text-center" %>
+      <% end %>
+    </div>
+  </div>
+</div>
