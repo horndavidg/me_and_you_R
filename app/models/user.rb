@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
     validates :email, presence: true, uniqueness: true
-	validates :password, :name, presence: true
+	validates :name, presence: true
 	has_many :coupons, through: :connections
 	has_many :connections, dependent: :destroy
 	has_many :kudos, dependent: :destroy

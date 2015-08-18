@@ -1,2 +1,6 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<ul class="list-unstyled text-center">
+  <li><%= image_tag("#{current_user.picture}", id:"profile-img", class:"img-rounded img-responsive") %></li>
+  <li class="text-center font_lg"><h1><%= current_user.name %></h1></li>
+  <li class="text-center font_md"><h3><%= current_user.email %></h1></li>
+</ul>
+

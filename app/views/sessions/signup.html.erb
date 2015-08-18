@@ -2,7 +2,7 @@
   <div class="col-sm-7">
     <div class="well">
      <h2 class="text-center font_lg">Sign Up for Me & You</h2><br>
-      <%= form_for @user, url: signup_path do |f| %>
+      <%= form_for @user, url: users_path do |f| %>
         <%= render partial: "shared/errors", locals:{instance: @user} %>
         <div class="form-group">
           <%= f.label :name, class:"control-label" %>

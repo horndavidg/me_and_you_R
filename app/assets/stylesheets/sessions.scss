@@ -31,7 +31,7 @@ body {
 
 .auth_box {
   
-  margin-top: 100px;
+  margin-top: 60px;
   margin-left: 640px;
   // margin-right: auto;
 
@@ -52,6 +52,12 @@ font-family: 'Indie Flower', cursive;
 .font_lg {
   font-size: 48px;
   font-family: 'Indie Flower', cursive;
+}
+
+.font_nav {
+  font-size: 30px;
+  font-family: 'Indie Flower', cursive;
+
 }
 
 
@@ -78,6 +84,10 @@ font-family: 'Indie Flower', cursive;
 
 .white {
   color: white;
+}
+
+.red {
+  color: rgb(66, 7, 16);
 }
 
 .navcolor {

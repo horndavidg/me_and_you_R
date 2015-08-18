@@ -17,21 +17,21 @@
  <nav id="mainNav" class="navcolor navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
-       <%= link_to "Me & You", root_path, class:"navbar-brand link_color" %>
+       <%= link_to "Me & You", root_path, class:"navbar-brand link_color font_nav" %>
       </div>
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
 
           <% if @current_user == nil %>
-              <li><%= link_to "Login", login_path, {:style => 'color: white'} %></li>
+              <li><%= link_to "No Current User!", login_path, {:style => 'color: white'} %></li>
           <% end %>   
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <% if @current_user %>
             <li><p class="navbar-text"><span class="white">Signed in as
-            <%= link_to "#{@current_user.email}", user_path(@current_user)%></li>
-            <li><%= link_to "Log Out", logout_path %></li>
+            <%= link_to "#{@current_user.email}", user_path(@current_user), class:"red"%></li>
+            <li><%= link_to "Log Out", logout_path, {method: :delete, :style => 'color: white'}%></li>
           <% else %>
             <li><%= link_to "Login Please", login_path, {:style => 'color: white'} %></li>
           <% end %>
@@ -41,6 +41,18 @@
   </nav>
 
 <!--   End Navbar -->
+
+<!--   Flash Message -->
+
+   <% flash.each do |key, value| %>
+      <% if key == "notice" %>
+        <%= content_tag :div, value, class: "text-center alert alert-warning" %>
+      <% elsif key == "alert" %>
+        <%= content_tag :div, value, class: "text-center alert alert-danger" %>
+      <% else %>
+        <%= content_tag :div, value, class: "text-center alert alert-success" %>
+      <% end %>
+    <% end %>
 
 
 <!-- Page Content -->
