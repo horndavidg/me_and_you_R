@@ -23,7 +23,7 @@ def confirm_logged_in
 
   def prevent_login_signup
     if session[:user_id]
-      redirect_to :back, notice: "You are already logged in"
+      redirect_to user_path(@current_user) # , notice: "You are already logged in"
     end
   end
 

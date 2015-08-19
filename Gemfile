@@ -25,6 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem "bootstrap-sass"
 gem "bootswatch-rails"
+gem 'font-awesome-sass'
 
 gem 'dotenv-rails', :groups => [:development, :test]
 
@@ -66,8 +67,10 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem "capybara"  
   gem 'capybara-email'
-
+  gem 'launchy'
+  gem 'shoulda'
   gem 'puma-rails'
+  gem 'guard-rspec', require: false
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'

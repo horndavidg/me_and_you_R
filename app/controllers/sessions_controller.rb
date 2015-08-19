@@ -1,20 +1,30 @@
 class SessionsController < ApplicationController
   
+before_action :prevent_login_signup, only: [:signup, :login, :landing]
 
 
 
+
+
+
+# ---------------------------------------------
 
   def login
   end
+
+# ---------------------------------------------
 
   def signup
     @user = User.new
   end
 
+# ---------------------------------------------
+
+
   def landing
   end
 
-
+# ---------------------------------------------
 
 
 

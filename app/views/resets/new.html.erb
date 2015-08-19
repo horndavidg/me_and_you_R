@@ -1,2 +1,16 @@
-<h1>Resets#new</h1>
-<p>Find me in app/views/resets/new.html.erb</p>
+<div class="col-sm-offset-3 auth_box">
+  <div class="col-sm-7">
+    <div class="well">
+      <h2 class="font_lg text-center">Reset Password</h2><br>
+      <%= form_tag resets_path do %>
+        <div class="form-group">
+          <%= label_tag :email, "Email:", class:"control-label" %>
+          <%= text_field_tag :email, params[:email], autofocus: true, class:"form-control"%>
+        </div>
+
+        <%= submit_tag "Reset Password", class:"btn btn-block btn-primary" %>
+      <% end %>
+  
+    </div>
+  </div>
+</div>

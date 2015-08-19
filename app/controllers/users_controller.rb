@@ -4,14 +4,22 @@ before_action :confirm_logged_in, except: [:create]
 before_action :ensure_correct_user, except: [:create]
 before_action :set_user, only: [:show, :edit, :update, :destroy]
 
+# ---------------------------------------------
+
   def index
   end
+
+# ---------------------------------------------
 
   def new
   end
 
+# ---------------------------------------------
+
   def show
   end
+
+# ---------------------------------------------
 
   def edit
   end
@@ -48,7 +56,7 @@ before_action :set_user, only: [:show, :edit, :update, :destroy]
   def ensure_correct_user
       user = User.find params[:id]
       unless user.id.to_i == current_user.id
-        redirect_to :back, alert: "Not Authorized"
+        redirect_to login_path, alert: "Not Authorized"
       end
   end
 
