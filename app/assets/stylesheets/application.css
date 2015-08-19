@@ -26,6 +26,10 @@
 
  @import "bootswatch/united/bootswatch";
 
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
+
+
 
  // And finally bootswatch style itself
  // @import "bootswatch/journal/bootswatch";

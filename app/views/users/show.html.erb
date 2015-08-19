@@ -1,6 +1,45 @@
-<ul class="list-unstyled text-center">
-  <li><%= image_tag("#{current_user.picture}", id:"profile-img", class:"img-rounded img-responsive") %></li>
-  <li class="text-center font_lg"><h1><%= current_user.name %></h1></li>
-  <li class="text-center font_md"><h3><%= current_user.email %></h1></li>
-</ul>
+<div class="container">
+	
+<div class="row margin_top">
+  
+<% if current_user.picture == "" %>
+ 
 
+     <div class="col-md-6"><%= link_to "Add a Picture!", edit_user_path(current_user), class:"text-center font_lg white" %></div>
+
+
+<% else %>
+
+      <div class="col-md-6"><%= image_tag("#{current_user.picture}", id:"profile-img", class:"img-rounded img-responsive") %></div>
+
+<% end %>
+
+<div class="col-md-6">
+
+<h1 class="text-center font_lg"><%= current_user.name %></h1>
+
+<h1 class="text-center font_lg"><%= current_user.email %></h1>
+
+<% if current_user.match == ""%>
+
+<h1 class="text-center font_lg">Match: <%= current_user.match %></h1>
+
+<% else %>
+
+<h1 class="text-center font_lg">Match: <%= link_to "Find One!", users_path %></h1>
+
+<% end %>
+
+
+<h1 class="text-center font_lg">Coupons:</h1>
+
+
+
+</div>
+
+
+
+
+
+
+</div>
