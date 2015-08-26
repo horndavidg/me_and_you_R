@@ -1,2 +1,12 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<h1 class="font_lg text-center"><u>Find Your Match</u></h1>
+
+
+
+
+<div class="all-user-box">
+<h2 class="white text-center font_md"><u>Availible Matches</u></h2>
+
+<% @all_users.each do |user|%>
+<h5 class="white text-center"><%= user.name%></h5>
+<% end %>
+</div>
