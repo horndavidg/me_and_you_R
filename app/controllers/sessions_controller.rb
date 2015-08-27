@@ -3,10 +3,6 @@ class SessionsController < ApplicationController
 before_action :prevent_login_signup, only: [:signup, :login, :landing]
 
 
-
-
-
-
 # ---------------------------------------------
 
   def login
@@ -23,18 +19,6 @@ before_action :prevent_login_signup, only: [:signup, :login, :landing]
 
   def landing
   end
-
-# ---------------------------------------------
-
-
-
-
-
-
-
-
-
-
 
 # ---------------------------------------------
 

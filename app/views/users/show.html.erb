@@ -22,9 +22,17 @@
 
 <h1 class="text-center font_lg"><%= current_user.email %></h1>
 
-<% if current_user.match != ""%>
+
+
+<!-- Logic for Showing Match Status -->
+
+<% if current_user.match != nil %>
 
 <h1 class="text-center font_lg">Match: <%= current_user.match %></h1>
+
+<% elsif current_user.match_pending or current_user.match_request %>
+
+<h1 class="text-center font_lg">Match: Request Pending!</h1>
 
 <% else %>
 
@@ -44,20 +52,42 @@
 <div class="row">
 
 <div class="col-md-6">
+<br>
+<!-- Match Details -->
+<% if current_user.match %>
+<div class="match-details-box">
+	
+<h1 class="white text-center font_lg"><u>Me and <%= @match_user.name%></u></h1>
 
+<h3 class="white text-center">Email: <%= @match_user.email%></h3>
 
+<h3 class="white text-center">Score: <%= @match_user.score%></h3>
 
+<h3 class="white text-center">Kudos: <%= @match_user.kudos%></h3>
 
+<h3 class="white text-center">Coupons: <%= @match_user.coupons%></h3>
 
 
 </div>
 
+<% end %>
+
+<!-- End Match Details -->
+
+</div>
+
+
+
+
+
 <div class="col-md-6">
 
-<% if current_user.match_request%>
+<!-- Logic for accepting/declining match request -->
 
-<h1>You have a pending match request from <span class="white"><%= @match_user.name%></span> <%= link_to "Accept", add_match_path(@current_user.id), method: :post %> / <%= link_to "Decline", no_match_path(@match_user.id), method: :delete %></h1>
-<%= image_tag("#{@match_user.picture}", id:"profile-img", class:"img-rounded img-responsive") %>
+<% if current_user.match_request %>
+
+<h1>You have a pending match request from <span class="white"><%= @match_user.name%></span> <%= link_to "Accept", add_match_path(@current_user.id), method: :post %> / <%= link_to "Decline", no_match_path(@current_user.id), method: :delete %></h1>
+<%= image_tag("#{@match_user.picture}", id:"profile-img", class:"img-rounded img-responsive box_align") %>
 
 <% end %>
 

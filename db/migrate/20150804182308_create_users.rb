@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :password
       t.string :picture
       t.string :match
-      t.integer :score
+      t.integer :score, :default => 0
       t.string :name
       t.string :password_digest
       t.string :password_reset_token
