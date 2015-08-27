@@ -2,11 +2,11 @@
 	
 <div class="row margin_top">
   
+<!-- Column One -->
+
 <% if current_user.picture == "" %>
- 
 
      <div class="col-md-6"><%= link_to "Add a Picture!", edit_user_path(current_user), class:"text-center font_lg white" %></div>
-
 
 <% else %>
 
@@ -14,13 +14,15 @@
 
 <% end %>
 
+<!-- Column Two -->
+
 <div class="col-md-6">
 
 <h1 class="text-center font_lg"><%= current_user.name %></h1>
 
 <h1 class="text-center font_lg"><%= current_user.email %></h1>
 
-<% if current_user.match == ""%>
+<% if current_user.match != ""%>
 
 <h1 class="text-center font_lg">Match: <%= current_user.match %></h1>
 
@@ -33,13 +35,36 @@
 
 <h1 class="text-center font_lg">Coupons:</h1>
 
+</div>
+
+</div>
+
+<!-- Row Two -->
+
+<div class="row">
+
+<div class="col-md-6">
+
+
+
+
 
 
 </div>
 
+<div class="col-md-6">
+
+<% if current_user.match_request%>
+
+<h1>You have a pending match request from <span class="white"><%= @match_user.name%></span> <%= link_to "Accept", add_match_path(@current_user.id), method: :post %> / <%= link_to "Decline", no_match_path(@match_user.id), method: :delete %></h1>
+<%= image_tag("#{@match_user.picture}", id:"profile-img", class:"img-rounded img-responsive") %>
+
+<% end %>
 
 
 
+
+</div>
 
 
 </div>

@@ -7,6 +7,11 @@
 <h2 class="white text-center font_md"><u>Availible Matches</u></h2>
 
 <% @all_users.each do |user|%>
-<h5 class="white text-center"><%= user.name%></h5>
+
+<% if user.match == nil && user.name != @current_user.name %>
+
+<h5 class="white text-center"><%= user.name%>  <%= link_to "Match", match_path(user.id), method: :post %></h5>
+
+   <% end %>
 <% end %>
 </div>

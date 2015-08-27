@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   get 'signup', to: "sessions#signup", as: "signup"
   post 'login', to: "sessions#attempt_login"
   delete 'logout', to: "sessions#logout", as: "logout"
+  post 'match/:id', to: "users#match", as: "match"
+  post 'matched/:id', to: "users#add_match", as: "add_match"
+  delete 'match/:id', to: "users#no_match", as: "no_match"
 
   resources :resets, only: [:new, :edit, :create, :update]
 
