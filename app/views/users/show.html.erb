@@ -28,7 +28,20 @@
 
 <% if current_user.match != nil %>
 
+
+
+
+
+<!-- Has Match Logic -->
+
 <h1 class="text-center font_lg">Match: <%= current_user.match %></h1>
+
+<p class="text-center font_lg"><%= link_to "Give a Kudo", new_user_kudo_path(@current_user) %></p>
+
+<!-- End has Match Logic -->
+
+
+
 
 <% elsif current_user.match_pending or current_user.match_request %>
 
@@ -98,3 +111,31 @@
 
 
 </div>
+
+<% if current_user.is_admin %>
+
+<h1></h1>
+
+<div class="match-details-box">
+	
+<h1 class="white text-center font_lg"><u>Is an Admin: (all users)</u></h1>
+
+<% @all_users.each do |user|%>
+
+<h3 class="white text-center"><%= user.name %> / <%= link_to "Delete", user_path(user.id), method: :delete %></h3>
+
+<% end %>
+
+
+</div>
+
+<% end %>
+
+
+
+
+<!-- End Container -->
+
+</div>
+
+

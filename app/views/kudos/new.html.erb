@@ -1,2 +1,18 @@
-<h1>Kudos#new</h1>
-<p>Find me in app/views/kudos/new.html.erb</p>
+<div class="container kudo_form">
+ 
+  <%= form_for @kudo, url: user_kudos_path(@current_user) do |f| %>
+        <%= render partial: "shared/errors", locals:{instance: @kudo} %>
+        <div class="form-group">
+          <%= f.label :description, class:"control-label" %>
+          <%= f.text_field :description, class:"form-control" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :points, class:"control-label" %>
+          <%= f.number_field :points, class:"form-control" %>
+        </div>
+
+        <%= f.submit "Create", id:"submit-user", class:"btn btn-block btn-success text-center" %>
+      <% end %>
+
+</div>

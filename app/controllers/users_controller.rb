@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   
 before_action :confirm_logged_in, except: [:create]
-before_action :ensure_correct_user, except: [:create, :index, :match]
+before_action :ensure_correct_user, except: [:create, :index, :match, :destroy]
 before_action :set_user, only: [:edit, :update, :destroy, :show]
 before_action :unmatched_user, only: [:index]
 # before_action :user_match, only: [:show]
@@ -87,6 +87,9 @@ before_action :unmatched_user, only: [:index]
 # ---------------------------------------------
 
   def show
+
+      @all_users = User.all
+
       # Finds match info for the user show page
       if @current_user.match_request
       @match_user = User.find_by_id(@current_user.match_request)  
@@ -99,6 +102,19 @@ before_action :unmatched_user, only: [:index]
 # ---------------------------------------------
 
   def edit
+  end
+
+# ---------------------------------------------
+
+  def destroy
+
+    @user = User.find params[:id]
+    if @user.destroy
+      redirect_to user_path(@current_user), flash: {alert: "User Deleted!"}
+    else
+      render "users/show"
+    end
+
   end
 
 # ---------------------------------------------
