@@ -58,7 +58,7 @@ before_action :unmatched_user, only: [:index]
       redirect_to user_path(@current_user), flash: {success: "Matched with #{@match_user.name}!"}
     else
       render "users/show"
-   end
+  end
 
   end
 
@@ -80,7 +80,7 @@ before_action :unmatched_user, only: [:index]
       redirect_to user_path(@current_user), flash: {alert: "Match request declined"}
     else
       render "users/show"
-   end
+  end
 
   end
 

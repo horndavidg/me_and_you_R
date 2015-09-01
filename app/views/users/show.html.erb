@@ -112,6 +112,54 @@
 
 </div>
 
+<!-- Row Three -->
+
+<div class="row">
+
+
+<div class="col-md-6">
+ 
+ <% if @user.kudos %>
+
+<div class="match-details-box">
+
+<p class="white text-center font_md"><u>kudos you created:</u></p>	
+
+<% @user.kudos.each do |kudo| %>
+<div class="kudo-box">
+<p class="text-center font_sm"><%= kudo.description %></p>
+<p class="text-center">Points: <strong><%= kudo.points %></strong></p>
+
+</div>
+<% end %>
+
+	</div>
+
+<% end %>
+
+</div>
+
+<div class="col-md-6">
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!--  -->
+
 <% if current_user.is_admin %>
 
 <h1></h1>
