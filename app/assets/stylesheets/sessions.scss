@@ -70,6 +70,12 @@ font-family: 'Indie Flower', cursive;
 
 // Navbar Brand Link Color -----------------
 
+.nav-logo {
+   height: 36px;
+   max-width: 46px;
+   padding-bottom: 4px;
+}
+
 .link_color:link { 
   color: white;
 }
@@ -90,6 +96,7 @@ font-family: 'Indie Flower', cursive;
 #mainNav {
   // background-color: #871243;  
   border-radius: 0;
+  // padding: 0;
   // background-color: grey;
 }
 
