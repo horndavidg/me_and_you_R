@@ -1,16 +1,18 @@
 class SessionsController < ApplicationController
   
 before_action :prevent_login_signup, only: [:signup, :login, :landing]
-
+before_action :landing_page, only: [:login, :signup, :landing]
 
 # ---------------------------------------------
 
   def login
+ 
   end
 
 # ---------------------------------------------
 
   def signup
+
     @user = User.new
   end
 
@@ -18,6 +20,7 @@ before_action :prevent_login_signup, only: [:signup, :login, :landing]
 
 
   def landing
+    
   end
 
 # ---------------------------------------------
@@ -36,7 +39,7 @@ before_action :prevent_login_signup, only: [:signup, :login, :landing]
       flash[:alert] = "please enter an email and password"
       redirect_to login_path
     end
-  end
+ end
 
   # ---------------------------------------------
 
@@ -59,5 +62,8 @@ before_action :prevent_login_signup, only: [:signup, :login, :landing]
     )
   end
 
+ def landing_page
+    @landing_page = true
+ end
 
 end

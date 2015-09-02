@@ -5,11 +5,18 @@
 
 // Site Background -------------------
 
-body {
+.flower {
 
   background: url(white.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   background-size: cover;
+  margin-bottom: 50px;
+ 
+}
+
+ body {
+
+  background: #BDE2E8;
   margin-bottom: 50px;
  
 }
@@ -74,6 +81,10 @@ font-family: 'Indie Flower', cursive;
 }
 .link_color:active { 
   color: white;
+}
+
+.box-icon {
+  font-size: 24px;
 }
 
 #mainNav {

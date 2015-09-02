@@ -1,8 +1,10 @@
 class ResetsController < ApplicationController
 
+before_action :landing_page, only: [:new, :edit]
 
 
 def new
+   
 end
 
 # ---------------------------------------------
@@ -25,6 +27,7 @@ end
 # ---------------------------------------------
 
   def edit
+
     @user = User.find_by(password_reset_token: params[:id])
     
     if @user
@@ -52,8 +55,13 @@ end
 # ---------------------------------------------
 
   private
+
   def user_params
     params.require(:user).permit(:password)
+  end
+
+  def landing_page
+    @landing_page = true
   end
 
 end

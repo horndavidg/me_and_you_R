@@ -76,7 +76,17 @@
 
 <h3 class="white text-center">Score: <%= @match_user.score%></h3>
 
-<h3 class="white text-center">Kudos: <%= @match_user.kudos%></h3>
+<h3 class="white text-center">Kudos: </h3>
+<% @match_user.kudos.each do |kudo| %>
+
+<div class="kudo-box">
+<p class="text-center font_sm"><%= kudo.description %></p>
+<p class="text-center">Points: <strong><%= kudo.points %></strong></p>
+
+</div>
+
+<% end %>
+
 
 <h3 class="white text-center">Coupons: <%= @match_user.coupons%></h3>
 
@@ -178,7 +188,6 @@
 </div>
 
 <% end %>
-
 
 
 
