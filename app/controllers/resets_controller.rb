@@ -1,6 +1,6 @@
 class ResetsController < ApplicationController
 
-before_action :landing_page, only: [:new, :edit]
+before_action :landing_page, only: [:new, :edit, :update]
 
 
 def new
@@ -41,8 +41,13 @@ end
 
   def update
     @user = User.find_by(password_reset_token: params[:id])
-    
-    if @user && @user.update(user_params)
+
+    if user_params[:password] === ""
+
+      flash.now[:notice] = "Your new password can't be blank!"
+      render :edit 
+
+    elsif @user && @user.update(user_params)
       @user.update(password_reset_token: nil)
       session[:user_id] = @user.id
       redirect_to user_path(@user.id), flash: {success: "Password updated."}

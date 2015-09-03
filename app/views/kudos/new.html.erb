@@ -1,17 +1,23 @@
 <div class="container kudo_form">
  
-  <%= form_for @kudo, url: user_kudos_path(@current_user) do |f| %>
+  <%= form_for @kudo, url: kudos_path do |f| %>
         <%= render partial: "shared/errors", locals:{instance: @kudo} %>
         <div class="form-group">
-          <%= f.label :description, class:"control-label" %>
+          <%= f.label :description, class:"control-label pad" %>
           <%= f.text_area :description, size: "24x4", class:"form-control" %>
         </div>
-
+        <div class="form-inline">
         <div class="form-group">
           <%= f.label :points, class:"control-label" %>
           <%= f.number_field :points, class:"form-control" %>
         </div>
 
+        <div class="form-group">
+          <%= f.label :date, class:"control-label" %>
+          <%= f.date_field :date, class:"form-control" %>
+        </div>
+        </div>
+        <br>
         <%= f.submit "Create", id:"submit-user", class:"btn btn-block btn-success text-center" %>
       <% end %>
 

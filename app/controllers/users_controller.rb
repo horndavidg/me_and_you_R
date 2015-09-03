@@ -89,7 +89,7 @@ before_action :unmatched_user, only: [:index]
   def show
 
       @all_users = User.all
-
+      @recent_kudos = Kudo.recent_kudos(@current_user)
       # Finds match info for the user show page
       if @current_user.match_request
       @match_user = User.find_by_id(@current_user.match_request)  
@@ -125,6 +125,7 @@ before_action :unmatched_user, only: [:index]
       session[:user_id] = @user.id
       redirect_to user_path(@user)
     else
+      @landing_page = true
       render "sessions/signup"
     end
   end

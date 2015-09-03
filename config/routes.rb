@@ -15,21 +15,11 @@ Rails.application.routes.draw do
   # resources :users, only: [:index,:destroy,:update]
   # resources :users, except: [:new,:destroy]
 
-  resources :users do 
+  resources :users
 
-     resources :kudos
+  resources :kudos
 
-  end
-
-   resources :coupons
-
-
-
-
-
-
-
-
+  resources :coupons
 
 
 

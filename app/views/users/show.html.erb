@@ -30,13 +30,13 @@
 
 
 
-
-
 <!-- Has Match Logic -->
 
 <h1 class="text-center font_lg">Match: <%= current_user.match %></h1>
 
-<p class="text-center font_lg"><%= link_to "Give a Kudo", new_user_kudo_path(@current_user) %></p>
+<p class="text-center font_lg"><%= link_to "Give a Kudo", new_kudo_path %></p>
+
+<h1 class="text-center font_lg">Your Score: <strong><%= current_user.score %></strong></h1>
 
 <!-- End has Match Logic -->
 
@@ -76,20 +76,9 @@
 
 <h3 class="white text-center">Score: <%= @match_user.score%></h3>
 
-<h3 class="white text-center">Kudos: </h3>
-<% @user.kudos.each do |kudo| %>
-
-<div class="kudo-box">
-<p class="text-center font_sm"><%= kudo.description %></p>
-<p class="text-center">Points: <strong><%= kudo.points %></strong></p>
-
-</div>
-
-<% end %>
-
+<h3 class="white text-center">Kudos: <%= @user.kudos.length %></h3>
 
 <h3 class="white text-center">Coupons: <%= @match_user.coupons%></h3>
-
 
 </div>
 
@@ -114,7 +103,30 @@
 
 <% end %>
 
+<!-- end pending match request -->
 
+ <% if @match_user %>
+
+<div class="match-details-box">
+
+<p class="white text-center font_md"><u>kudos you created:</u></p>	
+
+<% @match_user.kudos.each do |kudo| %>
+<% if kudo.creator_id.to_i == @user.id %>
+<div class="kudo-box-created">
+<% if kudo.date %>
+<p><strong>Date:</strong> <%= kudo.date.strftime("%m/%d/%Y") %></p>
+<% end %>
+<p class="text-center font_sm"><%= kudo.description %></p>
+<p class="text-center">Points: <strong><%= kudo.points %></strong> / <%= link_to "Delete", kudo_path(kudo), method: :delete %></p>
+
+</div>
+<% end %>
+<% end %>
+
+	</div>
+
+<% end %>
 
 
 </div>
@@ -126,41 +138,32 @@
 <br>
 <div class="row">
 
-<div class="col-md-6">
- 
- <% if @match_user %>
+<% if @recent_kudos%>
 
-<div class="match-details-box">
+<p class="font_lg"><u>Kudos Received:</u></p>
 
-<p class="white text-center font_md"><u>kudos you created:</u></p>	
-
-<% @match_user.kudos.each do |kudo| %>
-<% if kudo.creator_id.to_i == @user.id %>
-<div class="kudo-box">
-<p class="text-center font_sm"><%= kudo.description %></p>
-<p class="text-center">Points: <strong><%= kudo.points %></strong></p>
-
-</div>
-<% end %>
-<% end %>
-
-	</div>
-
-<% end %>
-
-</div>
+<% @recent_kudos.each do |kudo|%>
 
 <div class="col-md-6">
-
-
-
-
+ <div class="kudo-box">
+ 	
+<div class="kudo-box-points">
+<p><strong><u>Points:</u></strong></p>
+<h1 class="pad-md"><%= kudo.points %></h1>	
 </div>
+<% if kudo.date %>
+<p><strong>Date:</strong> <%= kudo.date.strftime("%m/%d/%Y") %></p>
+<% end %>
+<p class="text-center font_md pad-md"><%= kudo.description %></p>
 
 
+
+
+ </div>
 </div>
-
-
+<% end %>
+<% end%>
+</div>
 
 
 

@@ -1,8 +1,8 @@
 class KudosController < ApplicationController
   
   before_action :unmatched_user, except: [:create]
-  before_action :set_user, only: [:create]
-  before_action :set_match, only: [:create]
+  before_action :set_user, only: [:create, :destroy]
+  before_action :set_match, only: [:create, :destroy]
 
  # ---------------------------------------------
 
@@ -40,6 +40,8 @@ class KudosController < ApplicationController
      if @kudo.save
      # @user.kudos << @kudo
  		 @match_user.kudos << @kudo
+     @match_user.score += @kudo.points
+     @match_user.save
      # binding.pry
      redirect_to user_path(@current_user), flash: {success: "Kudo Created!"}
      
@@ -55,16 +57,21 @@ class KudosController < ApplicationController
 # --------------------------------------------- 
 
 
+def destroy
+  
 
+@kudo = Kudo.find params[:id]
 
+if @kudo.destroy
+# eventually remove point reduction...
+@match_user.score -= @kudo.points
+@match_user.save
 
-
-
-
-
-
-
-
+redirect_to user_path(@current_user), flash: {success: "Kudo Deleted!"}
+else
+   render "users/show"
+end
+end
 
 
 
@@ -74,11 +81,11 @@ class KudosController < ApplicationController
   private
 
  def set_user
-    @user = User.find params[:user_id]
+    @user = User.find @current_user.id
  end
 
  def set_match
-    @user = User.find params[:user_id]
+    @user = User.find @current_user.id
     @match_user = User.find @user.match_id
  end
 
