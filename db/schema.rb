@@ -11,10 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150830224337) do
+ActiveRecord::Schema.define(version: 20150902200817) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "accolades", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "kudo_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "accolades", ["kudo_id"], name: "index_accolades_on_kudo_id", using: :btree
+  add_index "accolades", ["user_id"], name: "index_accolades_on_user_id", using: :btree
 
   create_table "connections", force: :cascade do |t|
     t.integer  "user_id"
@@ -45,7 +55,6 @@ ActiveRecord::Schema.define(version: 20150830224337) do
     t.string   "creator_name"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-    t.string   "user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -65,6 +74,8 @@ ActiveRecord::Schema.define(version: 20150830224337) do
     t.boolean  "is_admin",             default: false
   end
 
+  add_foreign_key "accolades", "kudos"
+  add_foreign_key "accolades", "users"
   add_foreign_key "connections", "coupons"
   add_foreign_key "connections", "users"
 end

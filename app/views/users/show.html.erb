@@ -77,7 +77,7 @@
 <h3 class="white text-center">Score: <%= @match_user.score%></h3>
 
 <h3 class="white text-center">Kudos: </h3>
-<% @match_user.kudos.each do |kudo| %>
+<% @user.kudos.each do |kudo| %>
 
 <div class="kudo-box">
 <p class="text-center font_sm"><%= kudo.description %></p>
@@ -126,21 +126,22 @@
 <br>
 <div class="row">
 
-
 <div class="col-md-6">
  
- <% if @user.kudos %>
+ <% if @match_user %>
 
 <div class="match-details-box">
 
 <p class="white text-center font_md"><u>kudos you created:</u></p>	
 
-<% @user.kudos.each do |kudo| %>
+<% @match_user.kudos.each do |kudo| %>
+<% if kudo.creator_id.to_i == @user.id %>
 <div class="kudo-box">
 <p class="text-center font_sm"><%= kudo.description %></p>
 <p class="text-center">Points: <strong><%= kudo.points %></strong></p>
 
 </div>
+<% end %>
 <% end %>
 
 	</div>
@@ -150,8 +151,6 @@
 </div>
 
 <div class="col-md-6">
-
-
 
 
 
@@ -176,7 +175,7 @@
 
 <div class="match-details-box">
 	
-<h1 class="white text-center font_lg"><u>Is an Admin: (all users)</u></h1>
+<h1 class="white text-center font_lg"><u>Admin: (all users)</u></h1>
 
 <% @all_users.each do |user|%>
 
