@@ -4,15 +4,25 @@
   
 <!-- Column One -->
 
+<div class="col-md-6">
+
 <% if current_user.picture == "" %>
 
-     <div class="col-md-6"><%= link_to "Add a Picture!", edit_user_path(current_user), class:"text-center font_lg white" %></div>
+     <div class="text-center"><%= link_to "Add a Picture!", edit_user_path(current_user), class:"font_lg white" %></div>
 
 <% else %>
 
-      <div class="col-md-6"><%= image_tag("#{current_user.picture}", id:"profile-img", class:"img-rounded img-responsive") %></div>
+      <%= image_tag("#{current_user.picture}", id:"profile-img", class:"img-rounded img-responsive") %>
 
 <% end %>
+<br>
+<h1 class="text-center font_lg">Coupons:</h1>
+
+<h1 class="text-center font_lg">Your Score: <strong><%= current_user.score %></strong></h1>
+
+</div>
+
+
 
 <!-- Column Two -->
 
@@ -36,7 +46,6 @@
 
 <p class="text-center font_lg"><%= link_to "Give a Kudo", new_kudo_path %></p>
 
-<h1 class="text-center font_lg">Your Score: <strong><%= current_user.score %></strong></h1>
 
 <!-- End has Match Logic -->
 
@@ -54,7 +63,7 @@
 <% end %>
 
 
-<h1 class="text-center font_lg">Coupons:</h1>
+
 
 </div>
 
@@ -145,7 +154,7 @@
 <% @recent_kudos.each do |kudo|%>
 
 <div class="col-md-6">
- <div class="kudo-box">
+ <div class="kudo-box animated fadeInUpBig">
  	
 <div class="kudo-box-points">
 <p><strong><u>Points:</u></strong></p>

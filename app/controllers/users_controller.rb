@@ -14,11 +14,6 @@ before_action :unmatched_user, only: [:index]
 
 # ---------------------------------------------
 
-  def new
-  end
-
-# ---------------------------------------------
-
   def match 
   # finds the user to request a match from
   @match_user = User.find params[:id]
@@ -106,15 +101,41 @@ before_action :unmatched_user, only: [:index]
 
 # ---------------------------------------------
 
+ def update
+
+   @user.update user_params
+
+   if @user.save
+      redirect_to user_path(@current_user), flash: {success: "Information updated!"}
+    else
+      render :edit
+   end
+ end
+
+# ---------------------------------------------
+
+
+
   def destroy
 
     @user = User.find params[:id]
-    if @user.destroy
-      redirect_to user_path(@current_user), flash: {alert: "User Deleted!"}
-    else
-      render "users/show"
-    end
+    
+    if @user.id === @current_user.id
+       
+       if @user.destroy
+          session[:user_id] = nil
+          redirect_to root_path, flash: {alert: "User Account Deleted!"}
+       else
+          render "users/show"
+       end
 
+    else
+       if @user.destroy
+          redirect_to user_path(@current_user), flash: {alert: "User Deleted!"}
+       else
+          render "users/show"
+       end
+    end
   end
 
 # ---------------------------------------------
