@@ -1,2 +1,68 @@
-<h1>Kudos#index</h1>
-<p>Find me in app/views/kudos/index.html.erb</p>
+<div class="container">
+	
+<div class="row margin_top">
+  
+<!-- Row One -->
+<% if @user.kudos%>
+
+<p class="font_lg"><u><%= @user.name%>'s Kudos:</u></p>
+
+<% @user.kudos.each do |kudo|%>
+
+<div class="col-md-6">
+ <div class="kudo-box animated fadeInUpBig">
+ 	
+<div class="kudo-box-points">
+<p><strong><u>Points:</u></strong></p>
+<h1 class="pad-md"><%= kudo.points %></h1>	
+</div>
+<% if kudo.date %>
+<p><strong>Date:</strong> <%= kudo.date.strftime("%m/%d/%Y") %></p>
+<% end %>
+<p class="text-center font_md pad-md"><%= kudo.description %></p>
+
+
+
+
+ </div>
+</div>
+<% end %>
+<% end %>
+</div>
+
+
+<div class="row">
+  
+<!-- Row Two -->
+
+<% if @match_user.kudos%>
+
+<p class="font_lg"><u><%= @match_user.name%>'s Kudos:</u></p>
+
+
+<% @match_user.kudos.each do |kudo|%>
+
+<div class="col-md-6">
+ <div class="kudo-box animated fadeInUpBig">
+ 	
+<div class="kudo-box-points">
+<p><strong><u>Points:</u></strong></p>
+<h1 class="pad-md"><%= kudo.points %></h1>	
+</div>
+<% if kudo.date %>
+<p><strong>Date:</strong> <%= kudo.date.strftime("%m/%d/%Y") %></p>
+<% end %>
+<p class="text-center font_md pad-md"><%= kudo.description %></p>
+
+
+
+
+ </div>
+</div>
+<% end %>
+<% end %>
+</div>
+
+
+
+</div>

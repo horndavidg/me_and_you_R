@@ -1,3 +1,4 @@
+<%= render partial: 'shared/fb_sdk' %>
 <div class="container">
 	
 <div class="row margin_top">
@@ -16,9 +17,10 @@
 
 <% end %>
 <br>
-<h1 class="text-center font_lg">Coupons:</h1>
 
 <h1 class="text-center font_lg">Your Score: <strong><%= current_user.score %></strong></h1>
+
+<h1 class="text-center font_lg">Coupons:</h1>
 
 </div>
 
@@ -61,7 +63,6 @@
 <h1 class="text-center font_lg">Match: <%= link_to "Find One!", users_path %></h1>
 
 <% end %>
-
 
 
 
@@ -199,6 +200,13 @@
 </div>
 
 <% end %>
+
+<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
 
 <!-- End Container -->
 

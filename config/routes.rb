@@ -9,15 +9,18 @@ Rails.application.routes.draw do
   post 'match/:id', to: "users#match", as: "match"
   post 'matched/:id', to: "users#add_match", as: "add_match"
   delete 'match/:id', to: "users#no_match", as: "no_match"
+  delete 'matched/:id', to: "users#remove_match", as: "remove_match"
+  
+
 
   resources :resets, only: [:new, :edit, :create, :update]
 
   # resources :users, only: [:index,:destroy,:update]
   # resources :users, except: [:new,:destroy]
 
-  resources :users
+  resources :users, except: [:new]
 
-  resources :kudos
+  resources :kudos, except: [:show]
 
   resources :coupons
 

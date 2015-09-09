@@ -1,8 +1,8 @@
 class KudosController < ApplicationController
   
   before_action :unmatched_user, except: [:create]
-  before_action :set_user, only: [:create, :destroy]
-  before_action :set_match, only: [:create, :destroy]
+  before_action :set_user, only: [:create, :destroy, :index]
+  before_action :set_match, only: [:create, :destroy, :index]
 
  # ---------------------------------------------
 
@@ -20,11 +20,6 @@ class KudosController < ApplicationController
 
   def new
   	@kudo = Kudo.new
-  end
-
-    # ---------------------------------------------
-
-  def show
   end
 
     # ---------------------------------------------

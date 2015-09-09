@@ -2,9 +2,9 @@ class UsersController < ApplicationController
   
 before_action :confirm_logged_in, except: [:create]
 before_action :ensure_correct_user, except: [:create, :index, :match, :destroy]
-before_action :set_user, only: [:edit, :update, :destroy, :show]
+before_action :set_user, only: [:edit, :update, :destroy, :show, :remove_match]
 before_action :unmatched_user, only: [:index]
-before_action :find_match, only: [:add_match, :no_match, :destroy]
+before_action :find_match, only: [:add_match, :no_match, :destroy, :remove_match]
 
 # ---------------------------------------------
 
@@ -81,6 +81,36 @@ before_action :find_match, only: [:add_match, :no_match, :destroy]
 
 # ---------------------------------------------
 
+  def remove_match
+
+          @match_user.kudos = []
+          @match_user.match_request = nil
+          @match_user.match_pending = false
+          @match_user.match = nil
+          @match_user.match_id = nil
+          @match_user.score = 0
+          
+          @user.kudos = []
+          @user.match_request = nil
+          @user.match_pending = false
+          @user.match = nil
+          @user.match_id = nil
+          @user.score = 0
+         if @user.save && @match_user.save
+
+          redirect_to user_path(@current_user), flash: {alert: "Match removed!"}
+         else
+       
+         render :edit
+
+         end
+
+    
+
+  end
+
+# ---------------------------------------------
+
   def show
 
       @all_users = User.all
@@ -118,7 +148,7 @@ before_action :find_match, only: [:add_match, :no_match, :destroy]
 
   def destroy
 
-    @user = User.find params[:id]
+    # @user = User.find params[:id]
     
     if @user.id === @current_user.id
        

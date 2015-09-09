@@ -22,6 +22,14 @@
       <% end %>
    <br>
    <%= link_to "Reset My Password", new_reset_path, class:"btn btn-block btn-info" %>
+  
+   
+   <% if @user.match_id != nil %>
+   <br>
+   <%= link_to "Remove My Match", remove_match_path(@user.id), method: :delete, class:"btn btn-block btn-warning", data: {confirm: "Are you sure? This will delete all of your shared information with your match!"} %>
+
+    <% end %>
+
    <br>
    <%= link_to "Delete My Account", user_path(@user.id), method: :delete, class:"btn btn-block btn-danger", data: {confirm: "Are you sure? This will delete all of your information and that shared with your match!"} %>
 </div>
