@@ -1,5 +1,6 @@
 class Kudo < ActiveRecord::Base
 	validates :description, :points, presence: true
+	validates :points, numericality: { greater_than_or_equal_to: 1 }
 	has_many :users, through: :accolades
 	has_many :accolades, dependent: :destroy
 

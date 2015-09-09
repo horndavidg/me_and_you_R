@@ -1,7 +1,9 @@
+<%= render partial: "shared/errors", locals:{instance: @kudo} %>
+  
 <div class="container kudo_form">
- 
+
   <%= form_for @kudo, url: kudos_path do |f| %>
-        <%= render partial: "shared/errors", locals:{instance: @kudo} %>
+       
         <div class="form-group">
           <%= f.label :description, class:"control-label pad" %>
           <%= f.text_area :description, size: "24x4", class:"form-control" %>
