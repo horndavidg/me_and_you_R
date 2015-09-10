@@ -2,6 +2,15 @@ Rails.application.routes.draw do
   
   root "sessions#landing"
 
+  
+
+match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
+match 'auth/failure', to: redirect('/'), via: [:get, :post]
+match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
+
+
+
+
   get 'login', to: "sessions#login", as: "login"
   get 'signup', to: "sessions#signup", as: "signup"
   post 'login', to: "sessions#attempt_login"

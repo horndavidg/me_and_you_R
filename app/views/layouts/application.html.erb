@@ -45,15 +45,20 @@
              
                <% if @current_user.picture != ""%>
              
-               <li class="navbar-text"><%= image_tag("#{current_user.picture}", class: "img-rounded avatar") %></li>
+               <li class="navbar-text"><%= image_tag("#{current_user.picture}", class:"img-rounded avatar") %></li>
 
                 <% end %>
 
             <li><p class="navbar-text"><span class="white">Signed in as
-            <%= link_to "#{@current_user.email}", user_path(@current_user), class:"red"%></li>
+            <%= link_to "#{@current_user.name}", user_path(@current_user), class:"red"%></li>
             <li><%= link_to "Log Out", logout_path, {method: :delete, :style => 'color: white'}%></li>
           <% else %>
-            <li><%= link_to "Login Please", login_path, {:style => 'color: white'} %></li>
+            <li><%= link_to "Login Please", login_path, {:style => 'color: white'} %> </li>
+
+           <!-- FB Login Button -->
+           
+            <li><%= link_to (image_tag"facebook-login-button-002.png", class:"fb-button"), "/auth/facebook", id: "sign_in", :style => 'color: white' %></li>
+
           <% end %>
         </ul>
       </div>
@@ -73,6 +78,14 @@
         <%= content_tag :div, value, class: "text-center alert alert-success" %>
       <% end %>
     <% end %>
+
+
+
+
+
+
+
+
 
 
 <!-- Page Content -->

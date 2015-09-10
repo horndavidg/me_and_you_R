@@ -1,4 +1,4 @@
-<%= render partial: 'shared/fb_sdk' %>
+
 <div class="container">
 	
 <div class="row margin_top">
@@ -32,15 +32,20 @@
 
 <h1 class="text-center font_lg"><%= current_user.name %></h1>
 
-<h1 class="text-center font_lg"><%= current_user.email %></h1>
+<!-- Logic checking if the user entered a valid email -->
 
+<% if current_user.email === "Please add email!" %>
+
+<div class="text-center"><%= link_to "Please add email!", edit_user_path(@current_user), class:"font_lg" %></div>
+
+<% else %>
+<h1 class="text-center font_lg"><%= current_user.email %></h1>
+<% end %>
 
 
 <!-- Logic for Showing Match Status -->
 
 <% if current_user.match != nil %>
-
-
 
 <!-- Has Match Logic -->
 
@@ -201,12 +206,6 @@
 
 <% end %>
 
-<div
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
-</div>
 
 <!-- End Container -->
 

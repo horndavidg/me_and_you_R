@@ -9,7 +9,7 @@ def confirm_logged_in
     unless session[:user_id]
       redirect_to login_path, alert: "Please log in"
     end
-  end
+end
 
     # -------------------------------------------------
 

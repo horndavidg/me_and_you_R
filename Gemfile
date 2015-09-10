@@ -30,6 +30,7 @@ gem 'font-awesome-sass'
 gem 'dotenv-rails', :groups => [:development, :test]
 
 gem 'omniauth', '~> 1.2.2'
+gem 'omniauth-facebook', '1.4.0'
 
 gem 'json'
 gem 'handlebars_assets'

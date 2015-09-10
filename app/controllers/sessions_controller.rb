@@ -3,6 +3,26 @@ class SessionsController < ApplicationController
 before_action :prevent_login_signup, only: [:signup, :login, :landing]
 before_action :landing_page, only: [:login, :signup, :landing]
 
+
+# ---------------------------------------------
+
+# For FB Login:
+
+  def create
+    user = User.from_omniauth(env["omniauth.auth"])
+    session[:user_id] = user.id
+    redirect_to root_url
+  end
+
+# ---------------------------------------------
+
+# For FB Login:
+
+  def destroy
+    session[:user_id] = nil
+    redirect_to root_url
+  end
+
 # ---------------------------------------------
 
   def login

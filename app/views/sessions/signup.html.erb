@@ -6,7 +6,7 @@
         <%= render partial: "shared/errors", locals:{instance: @user} %>
         <div class="form-group">
           <%= f.label :name, class:"control-label" %>
-          <%= f.text_field :name, class:"form-control" %>
+          <%= f.text_field :name, class:"form-control", placeholder:"first and last" %>
         </div>
            <div class="form-group">
           <%= f.label :email, class:"control-label" %>
