@@ -49,8 +49,8 @@
 
                 <% end %>
 
-            <li><p class="navbar-text"><span class="white">Signed in as
-            <%= link_to "#{@current_user.name}", user_path(@current_user), class:"red"%></li>
+            <li><p class="navbar-text"><span class="white">Signed in as </span>
+            <%= link_to "#{@current_user.name}", user_path(@current_user), class:"red"%></p></li>
             <li><%= link_to "Log Out", logout_path, {method: :delete, :style => 'color: white'}%></li>
           <% else %>
             <li><%= link_to "Login Please", login_path, {:style => 'color: white'} %> </li>
