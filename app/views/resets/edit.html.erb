@@ -2,7 +2,8 @@
   <div class="col-sm-7">
     <div class="well">
       <h2 class="font_lg text-center">Change Your Password</h2><br>
-      <%= form_for :user, url:reset_path(@user.password_reset_token), method: :patch do |f|%>
+      <%= @user%>
+      <%= form_for :user, url:resets_path(@user.password_reset_token), method: :patch do |f|%>
         <div class="form-group">
           <%= f.label :passwrod, "New Password", class:"control-label" %>
           <%= f.password_field :password, autofocus: true, class:"form-control"%>

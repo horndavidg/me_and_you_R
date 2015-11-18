@@ -9,6 +9,7 @@ before_action :landing_page, only: [:login, :signup, :landing]
 # For FB Login:
 
   def create
+    binding.pry
     user = User.from_omniauth(env["omniauth.auth"])
     session[:user_id] = user.id
     redirect_to root_url
