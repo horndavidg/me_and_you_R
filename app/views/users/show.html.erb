@@ -11,12 +11,10 @@
 
      <div class="text-center"><%= link_to "Add a Picture!", edit_user_path(current_user), class:"font_lg white" %></div>
 
-<% else %>
-
-      <%= image_tag("#{current_user.picture}", id:"profile-img", class:"img-rounded img-responsive") %>
+<!-- Removed show user photo logic -->
 
 <% end %>
-<br>
+
 
 <h1 class="text-center font_lg">Your Score: <strong><%= current_user.score %></strong></h1>
 
