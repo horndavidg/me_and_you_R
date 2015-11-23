@@ -111,8 +111,12 @@
 
 <% if current_user.match_request %>
 
-<h1>You have a pending match request from <span class="white"><%= @match_user.name%></span> <%= link_to "Accept", add_match_path(@current_user.id), method: :post %> / <%= link_to "Decline", no_match_path(@current_user.id), method: :delete %></h1>
-<%= image_tag("#{@match_user.picture}", id:"profile-img", class:"img-rounded img-responsive box_align") %>
+<h1><%= image_tag("#{@match_user.picture}", id:"profile-img", class:"img-rounded img-responsive box_align") %> You have a pending match request from <span class="white"><%= @match_user.name%></span>
+
+<br> 
+
+<%= link_to "Accept", add_match_path(@current_user.id), method: :post %> / <%= link_to "Decline", no_match_path(@current_user.id), method: :delete %></h1>
+
 
 <% end %>
 

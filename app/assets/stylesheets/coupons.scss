@@ -1,3 +1,52 @@
 // Place all the styles related to the coupons controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#coupon {
+
+ // padding: 10%;	
+ padding: 2%;
+ border: 5px dashed white;
+ height: 260px;
+
+
+}
+
+.design_one {
+
+ background-color: #366bc7;
+
+}
+
+.design_two {
+
+ background-color: #fcc94c;
+
+}
+
+.vert_text {
+
+margin-top: 20%;
+// margin-bottom: 50%;
+float: right;
+transform: rotate(270deg);
+transform-origin: left bottom 0;
+color: white;
+font: 40px bold;
+
+//  display: inline;
+//  position: fixed;
+
+// -webkit-transform: rotate(90deg);   
+// -moz-transform: rotate(90deg);
+// -ms-transform: rotate(90deg);
+// -o-transform: rotate(90deg);
+// transform: rotate(90deg);
+
+}
+
+.coup-text {
+
+	color: white;
+	font-size: 40px;
+}

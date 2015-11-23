@@ -1,6 +1,6 @@
 class CouponsController < ApplicationController
   
-
+before_action :set_user, only: [:create, :destroy, :index]
 
   def index
   end
@@ -13,6 +13,7 @@ class CouponsController < ApplicationController
   # ---------------------------------------------
 
   def new
+      @coupon = Coupon.new
   end
 
   # ---------------------------------------------
@@ -22,6 +23,25 @@ class CouponsController < ApplicationController
 
   # ---------------------------------------------
 
+
+
+
+# --------------------------------------------- 
+
+
+  private
+
+ def set_user
+    @user = User.find @current_user.id
+ end
+
+  def coupon_params
+    params.require(:kudo).permit(
+      :description,
+      :price,
+      :design
+    )
+  end
 
 
   
