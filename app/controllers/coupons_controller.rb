@@ -16,6 +16,31 @@ before_action :set_user, only: [:create, :destroy, :index]
       @coupon = Coupon.new
   end
 
+   # ---------------------------------------------
+
+  def create
+     
+     # binding.pry
+     
+     @coupon = Coupon.new coupon_params  
+
+     @coupon.creator_id = @user.id 
+     @coupon.creator_name = @user.name
+
+     if @coupon.save
+
+      @user.coupons << @coupon
+  
+     redirect_to user_path(@current_user), flash: {success: "Coupon Created!"}
+     
+         else
+ 
+         render "coupons/new"
+
+     end
+
+  end
+
   # ---------------------------------------------
 
   def show
@@ -36,10 +61,10 @@ before_action :set_user, only: [:create, :destroy, :index]
  end
 
   def coupon_params
-    params.require(:kudo).permit(
+    params.require(:coupon).permit(
       :description,
       :price,
-      :design
+      :design_id
     )
   end
 

@@ -12,15 +12,27 @@
 
 }
 
-.design_one {
+.design_1 {
 
  background-color: #366bc7;
 
 }
 
-.design_two {
+.design_2 {
 
  background-color: #fcc94c;
+
+}
+
+.design_3 {
+
+ background-color: #c60737;
+
+}
+
+.design_4 {
+
+ background-color: #4bc96d;
 
 }
 
@@ -45,8 +57,19 @@ font: 40px bold;
 
 }
 
-.coup-text {
-
-	color: white;
+.coup-head {
+	
+	font-family: 'Righteous', cursive;
 	font-size: 40px;
+    color: white;
+
+}
+
+.coup-text { 
+	
+    // font-family: 'Shadows Into Light', cursive;
+	font-family: 'Righteous', cursive;
+	color: white;
+	font-size: 20px;
+	
 }
