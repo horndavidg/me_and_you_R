@@ -1,8 +1,9 @@
 <div class="container">
 	
+<!-- Row One User Kudos -->
+
 <div class="row margin_top">
   
-<!-- Row One -->
 <% if @user.kudos%>
 
 <p class="font_lg"><u><%= @user.name%>'s Kudos:</u></p>
@@ -30,17 +31,75 @@
 <% end %>
 </div>
 
-
-
-
-<div class="row">
   
 <!-- Row Two User Coupons -->
+
+<div class="row">
+
 <% if @user.coupons%>
 
-<p class="font_lg"><u><%= @user.name%>'s coupons:</u></p>
+<p class="font_lg"><u><%= @user.name%>'s Coupons:</u></p>
 
 <% @user.coupons.each do |coupon|%>
+
+<div class="col-md-6">
+<div id="coupon" class="design_<%= coupon.design_id %> img-rounded animated fadeInUpBig">
+	
+	<p class="coup-head">PRICE: <strong><%= coupon.price %> POINTS</strong></p>
+
+	<p class="coup-text"><%= coupon.description %></p>
+
+
+</div>
+</div>
+
+<% end %>
+<% end %>
+</div>
+
+  
+<!-- Row Three Match Kudos -->
+
+<div class="row">
+
+<% if @match_user.kudos%>
+
+<p class="font_lg"><u><%= @match_user.name%>'s Kudos:</u></p>
+
+
+<% @match_user.kudos.each do |kudo|%>
+
+<div class="col-md-6">
+ <div class="kudo-box animated fadeInUpBig">
+ 	
+<div class="kudo-box-points">
+<p><strong><u>Points:</u></strong></p>
+<h1 class="pad-md"><%= kudo.points %></h1>	
+</div>
+<% if kudo.date %>
+<p><strong>Date:</strong> <%= kudo.date.strftime("%m/%d/%Y") %></p>
+<% end %>
+<p class="text-center font_md pad-md"><%= kudo.description %></p>
+
+
+ </div>
+</div>
+<% end %>
+<% end %>
+</div>
+
+
+
+  
+<!-- Row Four Match Coupons -->
+
+<div class="row">
+
+<% if @match_user.coupons%>
+
+<p class="font_lg"><u><%= @match_user.name%>'s Coupons:</u></p>
+
+<% @match_user.coupons.each do |coupon|%>
 
 <div class="col-md-6">
 <div id="coupon" class="design_<%= coupon.design_id %> img-rounded animated fadeInUpBig">
@@ -63,48 +122,4 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-<div class="row">
-  
-<!-- Row Two -->
-
-<% if @match_user.kudos%>
-
-<p class="font_lg"><u><%= @match_user.name%>'s Kudos:</u></p>
-
-
-<% @match_user.kudos.each do |kudo|%>
-
-<div class="col-md-6">
- <div class="kudo-box animated fadeInUpBig">
- 	
-<div class="kudo-box-points">
-<p><strong><u>Points:</u></strong></p>
-<h1 class="pad-md"><%= kudo.points %></h1>	
-</div>
-<% if kudo.date %>
-<p><strong>Date:</strong> <%= kudo.date.strftime("%m/%d/%Y") %></p>
-<% end %>
-<p class="text-center font_md pad-md"><%= kudo.description %></p>
-
-
-
-
- </div>
-</div>
-<% end %>
-<% end %>
-</div>
-
-
-
-</div>
+</div> <!-- end -->
