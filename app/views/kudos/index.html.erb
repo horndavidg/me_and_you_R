@@ -1,10 +1,12 @@
 <div class="container">
 	
+
+
 <!-- Row One User Kudos -->
 
-<div class="row margin_top">
+<div class="row">
   
-<% if @user.kudos%>
+<% if @user.kudos.length > 0 %>
 
 <p class="font_lg"><u><%= @user.name%>'s Kudos:</u></p>
 
@@ -22,9 +24,6 @@
 <% end %>
 <p class="text-center font_md pad-md"><%= kudo.description %></p>
 
-
-
-
  </div>
 </div>
 <% end %>
@@ -32,11 +31,14 @@
 </div>
 
   
+
+
+
 <!-- Row Two User Coupons -->
 
 <div class="row">
 
-<% if @user.coupons%>
+<% if @user.coupons.length > 0 %>
 
 <p class="font_lg"><u><%= @user.name%>'s Coupons:</u></p>
 
@@ -58,11 +60,14 @@
 </div>
 
   
+
+
+  
 <!-- Row Three Match Kudos -->
 
 <div class="row">
 
-<% if @match_user.kudos%>
+<% if @match_user.kudos.length > 0 %>
 
 <p class="font_lg"><u><%= @match_user.name%>'s Kudos:</u></p>
 
@@ -95,7 +100,7 @@
 
 <div class="row">
 
-<% if @match_user.coupons%>
+<% if @match_user.coupons.length > 0 %>
 
 <p class="font_lg"><u><%= @match_user.name%>'s Coupons:</u></p>
 

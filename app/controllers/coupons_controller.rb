@@ -20,8 +20,6 @@ before_action :set_user, only: [:create, :destroy, :index]
 
   def create
      
-     # binding.pry
-     
      @coupon = Coupon.new coupon_params  
 
      @coupon.creator_id = @user.id 
@@ -41,14 +39,27 @@ before_action :set_user, only: [:create, :destroy, :index]
 
   end
 
-  # ---------------------------------------------
+# ---------------------------------------------
 
-  def show
-  end
+def show
+end
 
-  # ---------------------------------------------
+# --------------------------------------------
 
 
+def destroy 
+
+@coupon = Coupon.find params[:id]
+
+if @coupon.destroy
+
+@user.save
+
+redirect_to user_path(@current_user), flash: {success: "Coupon Deleted!"}
+else
+   render "users/show"
+end
+end
 
 
 # --------------------------------------------- 
