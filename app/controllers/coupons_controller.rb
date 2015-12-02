@@ -39,9 +39,15 @@ before_action :set_user, only: [:create, :destroy, :index]
 
   end
 
+
 # ---------------------------------------------
 
-def show
+def buy
+
+    # binding.pry
+
+    redirect_to user_path(@current_user), flash: {success: "Coupon Bought!"}
+
 end
 
 # --------------------------------------------

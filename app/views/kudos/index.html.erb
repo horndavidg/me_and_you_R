@@ -8,7 +8,7 @@
   
 <% if @user.kudos.length > 0 %>
 
-<p class="font_lg"><u><%= @user.name%>'s Kudos:</u></p>
+<p class="font_lg"><u>My Kudos:</u></p>
 
 <% @user.kudos.each do |kudo|%>
 
@@ -28,9 +28,7 @@
 </div>
 <% end %>
 <% end %>
-</div>
-
-  
+</div>  
 
 
 
@@ -40,7 +38,7 @@
 
 <% if @user.coupons.length > 0 %>
 
-<p class="font_lg"><u><%= @user.name%>'s Coupons:</u></p>
+<p class="font_lg"><u>My Coupons:</u></p>
 
 <% @user.coupons.each do |coupon|%>
 
@@ -57,9 +55,7 @@
 
 <% end %>
 <% end %>
-</div>
-
-  
+</div> 
 
 
   
@@ -113,6 +109,12 @@
 
 	<p class="coup-text"><%= coupon.description %></p>
 
+	<!-- Only have the option to buy if the user has enough points -->
+	<% if @user.score > coupon.price %>
+
+	<p><%= link_to "", buy_coupon_path(coupon), { :style=>'color:#FFFFFF;', :class=>'fa fa-cart-plus fa-3x' } %></p>
+    
+    <% end %>
 
 </div>
 </div>
@@ -120,9 +122,6 @@
 <% end %>
 <% end %>
 </div>
-
-
-
 
 
 

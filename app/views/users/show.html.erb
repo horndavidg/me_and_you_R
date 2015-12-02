@@ -156,7 +156,7 @@
 <br>
 <div class="row">
 
-<% if @user.coupons%>
+<% if @user.coupons.length > 0 %>
 
 <p class="font_lg"><u>My Coupons:</u></p>
 
@@ -169,7 +169,7 @@
 
 	<p class="coup-text"><%= coupon.description %></p>
 
-<p class="coup-text"><%= link_to "Delete", coupon_path(coupon), method: :delete %></p>
+<p class="coup-text"><%= link_to "Delete", coupon_path(coupon), { method: :delete, :style=>'color:#FFFFFF;' } %></p>
 
 </div>
 </div>
@@ -185,7 +185,7 @@
 <br>
 <div class="row">
 
-<% if @recent_kudos%>
+<% if @recent_kudos.length > 0 %>
 
 <p class="font_lg"><u>Kudos Received:</u></p>
 

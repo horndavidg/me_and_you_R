@@ -9,8 +9,6 @@ match 'auth/failure', to: redirect('/'), via: [:get, :post]
 match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
 
 
-
-
   get 'login', to: "sessions#login", as: "login"
   get 'signup', to: "sessions#signup", as: "signup"
   post 'login', to: "sessions#attempt_login"
@@ -21,18 +19,15 @@ match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
   delete 'matched/:id', to: "users#remove_match", as: "remove_match"
   
 
-
   resources :resets, only: [:new, :edit, :create, :update]
-
-  # resources :users, only: [:index,:destroy,:update]
-  # resources :users, except: [:new,:destroy]
 
   resources :users, except: [:new]
 
-  resources :kudos, except: [:show]
+  resources :kudos, except: [:show, :edit]
 
-  resources :coupons
+  resources :coupons, except: [:show, :edit]
 
+  get 'buy-coupon/:id', to: "coupons#buy", as:"buy_coupon"
 
 
 end
