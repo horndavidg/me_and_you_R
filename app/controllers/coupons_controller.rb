@@ -3,11 +3,11 @@ class CouponsController < ApplicationController
 before_action :set_user, only: [:create, :destroy, :index]
 
   def index
-  end
 
-  # ---------------------------------------------
+      @user_created_coupons = @user.coupons.where("creator_id = '#{@user.id.to_s}'")
+      # finds all the coupons associated with the user that have the user's id as its
+      # creator_id....
 
-  def edit
   end
 
   # ---------------------------------------------
@@ -42,9 +42,13 @@ before_action :set_user, only: [:create, :destroy, :index]
 
 # ---------------------------------------------
 
-def buy
+def buy  
 
-    # binding.pry
+    @coupon = Coupon.find params[:id]
+
+    @current_user.coupons << @coupon
+
+    # TODO: Need to subtract points from user!
 
     redirect_to user_path(@current_user), flash: {success: "Coupon Bought!"}
 

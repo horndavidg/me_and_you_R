@@ -31,7 +31,7 @@ class KudosController < ApplicationController
      @match_user.score += @kudo.points
      @match_user.save
      # binding.pry
-     redirect_to user_path(@current_user), flash: {success: "Kudo Created!"}
+     redirect_to user_path(@current_user), flash: {success: "Kudo Given, Nice!"}
      
          else
  

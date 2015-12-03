@@ -71,6 +71,8 @@
 
 </div>
 
+
+
 <!-- Row Two -->
 
 <div class="row">
@@ -124,7 +126,7 @@
 
 <div class="match-details-box">
 
-<p class="white text-center font_md"><u>kudos you created:</u></p>	
+<p class="white text-center font_md"><u>kudos you have given:</u></p>	
 
 <% @match_user.kudos.each do |kudo| %>
 <% if kudo.creator_id.to_i == @user.id %>
@@ -156,20 +158,21 @@
 <br>
 <div class="row">
 
-<% if @user.coupons.length > 0 %>
+<% if @user_bought_coupons.length > 0 %>
 
-<p class="font_lg"><u>My Coupons:</u></p>
+<p class="font_lg"><u>Coupons to be Redeemed:</u></p>
 
-<% @user.coupons.each do |coupon|%>
+<% @user_bought_coupons.each do |coupon|%>
 
 <div class="col-md-6">
+
 <div id="coupon" class="design_<%= coupon.design_id %> img-rounded animated fadeInUpBig">
 	
 	<p class="coup-head">PRICE: <strong><%= coupon.price %> POINTS</strong></p>
 
 	<p class="coup-text"><%= coupon.description %></p>
 
-<p class="coup-text"><%= link_to "Delete", coupon_path(coupon), { method: :delete, :style=>'color:#FFFFFF;' } %></p>
+<p class="coup-text"><%= link_to "Redeemed", coupon_path(coupon), { method: :delete, :style=>'color:#FFFFFF;' } %></p>
 
 </div>
 </div>

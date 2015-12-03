@@ -1,2 +1,28 @@
-<h1>Coupons#index</h1>
-<p>Find me in app/views/coupons/index.html.erb</p>
+<div class="container">
+
+<div class="row">
+
+<% if @user_created_coupons.length > 0 %>
+
+<p class="font_lg"><u>My Coupons:</u></p>
+
+<% @user_created_coupons.each do |coupon|%>
+
+<div class="col-md-6">
+<div id="coupon" class="design_<%= coupon.design_id %> img-rounded animated fadeInUpBig">
+	
+	<p class="coup-head">PRICE: <strong><%= coupon.price %> POINTS</strong></p>
+
+	<p class="coup-text"><%= coupon.description %></p>
+
+<p class="coup-text"><%= link_to "Delete", coupon_path(coupon), { method: :delete, :style=>'color:#FFFFFF;' } %></p>
+
+</div>
+</div>
+
+<% end %>
+<% end%>
+</div>
+
+
+</div>

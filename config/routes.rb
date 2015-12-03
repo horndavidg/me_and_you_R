@@ -23,9 +23,9 @@ match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
 
   resources :users, except: [:new]
 
-  resources :kudos, except: [:show, :edit]
+  resources :kudos, except: [:show, :edit, :update]
 
-  resources :coupons, except: [:show, :edit]
+  resources :coupons, except: [:show, :edit, :update]
 
   get 'buy-coupon/:id', to: "coupons#buy", as:"buy_coupon"
 

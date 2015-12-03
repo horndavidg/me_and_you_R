@@ -116,6 +116,12 @@ before_action :find_match, only: [:add_match, :no_match, :destroy, :remove_match
       @all_users = User.all
       @recent_kudos = Kudo.recent_kudos(@current_user)
       # Finds match info for the user show page
+
+      @user_bought_coupons = @user.coupons.where("creator_id != '#{@user.id.to_s}'")
+      # finds all the coupons associated with the user that do not have the user's 
+      # id as its creator_id....
+
+
       if @current_user.match_request
       @match_user = User.find_by_id(@current_user.match_request)  
       elsif @current_user.match
