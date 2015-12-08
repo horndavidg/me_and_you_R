@@ -172,7 +172,7 @@
 
 	<p class="coup-text">I get: <%= coupon.description %></p>
 
-<p class="coup-text"><strong><%= link_to "Redeem!", coupon_path(coupon), { method: :delete, :style=>'color:#FFFFFF;' } %></strong></p>
+<p class="coup-text"><strong><%= link_to "Redeem!", redeem_coupon_path(coupon), { method: :delete, :style=>'color:#FFFFFF;' } %></strong></p>
 
 </div>
 </div>

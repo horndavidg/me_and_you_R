@@ -56,6 +56,29 @@ end
 
 # --------------------------------------------
 
+def redeem 
+
+@coupon = Coupon.find params[:id]
+match = User.find @current_user.match_id
+
+# Need to destroy coupon and send email to math_user
+
+if @coupon.destroy
+
+@current_user.save
+
+Redeem.redeem_notification(match).deliver_now
+
+redirect_to user_path(@current_user), flash: {success: "Coupon Used!"}
+else
+
+   render "users/show"
+end
+
+end
+
+# --------------------------------------------
+
 
 def destroy 
 
