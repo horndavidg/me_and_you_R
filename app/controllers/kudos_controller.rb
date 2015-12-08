@@ -7,6 +7,8 @@ class KudosController < ApplicationController
  # ---------------------------------------------
 
   def index
+    @user_created_coupons = @user.coupons.where("creator_id = '#{@user.id.to_s}'")
+    @match_created_coupons = @match_user.coupons.where("creator_id = '#{@match_user.id.to_s}'")
   end
 
     # ---------------------------------------------

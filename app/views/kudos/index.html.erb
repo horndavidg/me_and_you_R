@@ -36,11 +36,11 @@
 
 <div class="row">
 
-<% if @user.coupons.length > 0 %>
+<% if @user_created_coupons.length > 0 %>
 
 <p class="font_lg"><u>My Coupons:</u></p>
 
-<% @user.coupons.each do |coupon|%>
+<% @user_created_coupons.each do |coupon|%>
 
 <div class="col-md-6">
 <div id="coupon" class="design_<%= coupon.design_id %> img-rounded animated fadeInUpBig">
@@ -96,11 +96,11 @@
 
 <div class="row">
 
-<% if @match_user.coupons.length > 0 %>
+<% if @match_created_coupons.length > 0 %>
 
 <p class="font_lg"><u><%= @match_user.name%>'s Coupons:</u></p>
 
-<% @match_user.coupons.each do |coupon|%>
+<% @match_created_coupons.each do |coupon|%>
 
 <div class="col-md-6">
 <div id="coupon" class="design_<%= coupon.design_id %> img-rounded animated fadeInUpBig">

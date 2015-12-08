@@ -47,8 +47,8 @@ def buy
     @coupon = Coupon.find params[:id]
 
     @current_user.coupons << @coupon
-
-    # TODO: Need to subtract points from user!
+    @current_user.score -= @coupon.price
+    @current_user.save
 
     redirect_to user_path(@current_user), flash: {success: "Coupon Bought!"}
 

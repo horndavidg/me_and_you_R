@@ -4,7 +4,7 @@ before_action :confirm_logged_in, except: [:create]
 before_action :ensure_correct_user, except: [:create, :index, :match, :destroy]
 before_action :set_user, only: [:edit, :update, :destroy, :show, :remove_match]
 before_action :unmatched_user, only: [:index]
-before_action :find_match, only: [:add_match, :no_match, :destroy, :remove_match]
+before_action :find_match, only: [:add_match, :no_match, :destroy, :remove_match, :show]
 
 # ---------------------------------------------
 
@@ -116,7 +116,7 @@ before_action :find_match, only: [:add_match, :no_match, :destroy, :remove_match
       @all_users = User.all
       @recent_kudos = Kudo.recent_kudos(@current_user)
       # Finds match info for the user show page
-
+      @match_bought_coupons = @match_user.coupons.where("creator_id != '#{@match_user.id.to_s}'")
       @user_bought_coupons = @user.coupons.where("creator_id != '#{@user.id.to_s}'")
       # finds all the coupons associated with the user that do not have the user's 
       # id as its creator_id....

@@ -26,7 +26,7 @@
 
 <div class="col-md-6">
 
-<h1 class="text-center font_lg"><%= current_user.name %></h1>
+<h1 class="text-center font_lg">Me: <%= current_user.name %></h1>
 
 <!-- Logic checking if the user entered a valid email -->
 
@@ -83,15 +83,15 @@
 <% if current_user.match %>
 <div class="match-details-box">
 	
-<h1 class="white text-center font_lg"><u>Me and <%= @match_user.name%></u></h1>
+<h1 class="white text-center font_lg"><u>My Match:</u></h1>
 
-<h3 class="white text-center">Email: <%= @match_user.email%></h3>
+<h3 class="white text-center">Email: <%= @match_user.email %></h3>
 
-<h3 class="white text-center">Score: <%= @match_user.score%></h3>
+<h3 class="white text-center">Score: <%= @match_user.score %></h3>
 
 <h3 class="white text-center">Kudos: <%= @user.kudos.length %></h3>
 
-<h3 class="white text-center">Coupons: <%= @match_user.coupons.length%></h3>
+<h3 class="white text-center">Coupons Bought: <%= @match_bought_coupons.length %></h3>
 
 </div>
 
@@ -170,9 +170,9 @@
 	
 	<p class="coup-head">PRICE: <strong><%= coupon.price %> POINTS</strong></p>
 
-	<p class="coup-text"><%= coupon.description %></p>
+	<p class="coup-text">I get: <%= coupon.description %></p>
 
-<p class="coup-text"><%= link_to "Redeemed", coupon_path(coupon), { method: :delete, :style=>'color:#FFFFFF;' } %></p>
+<p class="coup-text"><strong><%= link_to "Redeem!", coupon_path(coupon), { method: :delete, :style=>'color:#FFFFFF;' } %></strong></p>
 
 </div>
 </div>
