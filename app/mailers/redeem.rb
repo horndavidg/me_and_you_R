@@ -5,12 +5,13 @@ class Redeem < ApplicationMailer
   #
   #   en.redeem.redeem_notification.subject
   #
-  def redeem_notification(match)
+  def redeem_notification(match,coupon)
     
     @match = match
-    @greeting = "Hi"
+    @coupon = coupon
 
    mail(to: "<#{match.email}>",
          subject: "Coupon Redeemed!")
+   
   end
 end

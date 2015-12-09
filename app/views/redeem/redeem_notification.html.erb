@@ -1,5 +1,17 @@
-<h1>Redeem#redeem_notification</h1>
+<h1><%= @match.match %> has redeemed one of your coupons!</h1>
 
-<p>
-  <%= @greeting %>, find me in app/views/redeem/redeem_notification.html.erb
-</p>
+<div style="padding: 2%;
+ border: 5px dashed white;
+ height: 260px;
+ width: 500px; 
+ background-color: #366bc7;" class="img-rounded">
+	
+	<p style="font-family: 'Roboto', sans-serif;
+	font-size: 30px;
+    color: white;">PRICE: <strong><%= @coupon.price %> POINTS</strong></p>
+
+	<p style="font-family: 'Roboto', sans-serif;
+	color: white;
+	font-size: 20px;">Description: <%= @coupon.description %></p>
+
+</div>
