@@ -2,7 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 // Site Background -------------------
 
 .flower {
@@ -25,11 +24,13 @@
 
 .welcome_box {
 	margin-top: 120px;
-	margin-left: 600px;
-	margin-right: auto;
+	// margin-left: 600px;
+  margin-left: 46%;
+	// margin-right: auto;
+  margin-right: 10%;
     background: rgba(66, 7, 16, 0.6);
-    width: 800px;
-    height: 300px;
+    // width: 800px;
+    // height: 300px;
 	// background: rgba(200, 54, 54, 0.6);
 	// background: rgba(66, 7, 16, 0.6);
 	// white background: rgba(223, 255, 240, 0.6);
