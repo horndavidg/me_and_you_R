@@ -28,11 +28,11 @@
          <a class="navbar-brand" href="#">
         <%= image_tag("me&you_squarelogo.png", :alt => "Me & You", class:"nav-logo") %>
       </a>
-
-       <ul class="dropdown-menu">
        
-       <% if @current_user %>
 
+     <% if @current_user %>
+
+       <ul class="dropdown-menu">       
 
             <li><%= link_to "My Page", user_path(@current_user) %></li>
             <li><%= link_to "Edit My Account", edit_user_path(@current_user) %></li>
@@ -40,11 +40,12 @@
             <li><%= link_to "Give A Kudo", new_kudo_path %></li>
             <li><%= link_to "Add Coupon", new_coupon_path %></li>
             <li><%= link_to "See My Coupons", coupons_path %></li>
-
-
-        <% end %>   
+            <li><%= link_to "Log Out", logout_path, {method: :delete}%></li>
 
         </ul>
+
+      <% end %> 
+      
     </li>
 </ul>
 
