@@ -10,8 +10,23 @@
 							<ul class="list-inline social-icons navbar-right">
 								<li><a href="https://www.facebook.com/games/?fbs=-1&app_id=903509093070590&preview=1&locale=en_US" class="facebook-bg" target="_blank"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
+								
+<!-- current user, log out -->
+
+							<% if @current_user %>
+
 								<li><%= link_to logout_path, method: :delete, class: "rss-bg" do %>
     							<i class="fa fa-sign-out"></i><% end %></li>
+								<% end %>
+
+<!-- no current user, login -->
+
+                           <% if !@current_user %>
+
+								<li><%= link_to login_path, class: "rss-bg" do %>
+    							<i class="fa fa-sign-in"></i><% end %></li>
+								<% end %>
+							
 
 							</ul>
 						</div>
