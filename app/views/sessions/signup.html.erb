@@ -1,7 +1,7 @@
 <div class="col-sm-offset-3 auth_box">
   <div class="col-sm-7">
     <div class="well">
-     <h2 class="text-center font_lg">Sign Up for Me & You</h2><br>
+     <h2 class="text-center font_lg">Sign Up for <span class="nobr">Me & You</span></h2><br>
       <%= form_for @user, url: users_path do |f| %>
         <%= render partial: "shared/errors", locals:{instance: @user} %>
         <div class="form-group">
