@@ -1,11 +1,11 @@
 <%= render partial: "shared/errors", locals:{instance: @coupon} %>
   
-<div class="container kudo_form">
+<div class="container coupon_form">
 
   <%= form_for @coupon, url: coupons_path do |f| %>
        
         <div class="form-group">
-          <%= f.label :description, class:"control-label pad" %>
+          <%= f.label :description, class:"control-label" %>
           <%= f.text_area :description, size: "24x4", class:"form-control" %>
         </div>
         <div class="form-inline">
