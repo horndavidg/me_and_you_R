@@ -4,7 +4,9 @@ before_action :landing_page, only: [:new, :edit, :update]
 
 
 def new
-   
+  
+
+
 end
 
 # ---------------------------------------------
@@ -19,8 +21,11 @@ end
       
       redirect_to login_path, notice: "Email sent"
     else
-      flash.now[:alert] = "Email not found"
-      render :new
+      # flash.now[:alert] = "Email not found"
+      # render :new
+      # simply rendering does not call the before action and/or 
+      # the controller so the background variable is not passed 
+      redirect_to new_reset_path, alert: "Email not found"
     end
   end
 
