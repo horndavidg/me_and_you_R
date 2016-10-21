@@ -44,8 +44,15 @@ before_action :set_user, only: [:create, :destroy, :index]
 
 def buy  
 
-    @coupon = Coupon.find params[:id]
+    # assigns the coupon being bought to a variable
+    coupon = Coupon.find params[:id]
+    # @coupon = Coupon.find params[:id]
 
+       # creates a duplicate of the Active Record Object and assigns it to an 
+       # instance variable.
+       @coupon = coupon.dup
+
+    # assigns the new object (coupon) to the match
     @current_user.coupons << @coupon
     @current_user.score -= @coupon.price
     @current_user.save
@@ -64,7 +71,7 @@ def redeem
 match = User.find @current_user.match_id
 coupon = @coupon
 
-# Need to destroy coupon and send email to math_user
+# Need to destroy coupon and send email to match_user
 
 if @coupon.destroy
 
