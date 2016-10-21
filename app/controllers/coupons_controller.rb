@@ -70,7 +70,8 @@ if @coupon.destroy
 
 @current_user.save
 
-Redeem.redeem_notification(match,coupon).deliver_now
+# Uncomment out to send Coupon Redeemed Emails!
+# Redeem.redeem_notification(match,coupon).deliver_now
 
 redirect_to user_path(@current_user), flash: {success: "Coupon Used!"}
 else
