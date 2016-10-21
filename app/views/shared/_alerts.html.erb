@@ -1,3 +1,17 @@
+
+
+<!-- Sets time out for flash messages -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+  setTimeout(function(){
+    $('.alert').remove();
+  }, 2000);
+ });
+</script>
+
+<!-- Flash message code -->
+
  <% flash.each do |key, value| %>
       <% if key == "notice" %>
         <%= content_tag :div, value, class: "text-center alert alert-warning" %>

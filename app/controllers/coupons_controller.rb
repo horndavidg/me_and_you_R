@@ -68,8 +68,8 @@ def redeem
 @coupon = Coupon.find params[:id]
 
 # For mailer:
-match = User.find @current_user.match_id
-coupon = @coupon
+# match = User.find @current_user.match_id
+# coupon = @coupon
 
 # Need to destroy coupon and send email to match_user
 
@@ -81,6 +81,7 @@ if @coupon.destroy
 # Redeem.redeem_notification(match,coupon).deliver_now
 
 redirect_to user_path(@current_user), flash: {success: "Coupon Used!"}
+
 else
 
    render "users/show"

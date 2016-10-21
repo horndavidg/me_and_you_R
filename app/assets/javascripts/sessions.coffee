@@ -4,9 +4,9 @@
 
 # Setting a timeout for the flash messages 
 
-  $ ->
-      flashCallback = ->
-        $(".alert").fadeOut()
-      $(".alert").bind 'click', (ev) =>
-        $(".alert").fadeOut()
-      setTimeout flashCallback, 2000
+# $ ->
+#     flashCallback = ->
+#       $(".alert").fadeOut()
+#     $(".alert").bind 'click', (ev) =>
+#       $(".alert").fadeOut()
+#     setTimeout flashCallback, 2000
