@@ -174,7 +174,13 @@
 
 	<p class="coup-text">I get: <%= coupon.description %></p>
 
-<p class="coup-text"><strong><%= link_to "Redeem!", redeem_coupon_path(coupon), { method: :delete, :style=>'color:#FFFFFF;' } %></strong></p>
+<!-- Coupon Redeem -->
+
+<p class="coup-text bottom-right"><strong><i class="fa fa-angle-double-right"></i> <%= link_to "Redeem!", redeem_coupon_path(coupon), { method: :delete, :style=>'color:#FFFFFF;' } %></strong></p>
+
+<!-- ^^ Change link style to button ^^ -->
+<!-- :style=>'color:#FFFFFF;' -->
+<!-- <strong> </strong> -->
 
 </div>
 </div>
