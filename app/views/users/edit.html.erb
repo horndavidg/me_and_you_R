@@ -1,6 +1,11 @@
  <%= render partial: "shared/errors", locals:{instance: @user} %>
 
 <div class="container edit_user_form">
+
+ <%= render partial: 'shared/alerts', locals:{instance: @user}  %>
+
+ <!-- WORK ON THIS ^^^^^^^ -->
+ 
      <h2 class="text-center font_lg"><u>Edit your information:</u></h2><br>
       
       <%= form_for @user, url: user_path(@user) do |f| %>
