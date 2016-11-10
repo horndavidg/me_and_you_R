@@ -226,11 +226,9 @@
 
 
 
-<!--  -->
+<!-- Logic for editing all users if current user is admin -->
 
 <% if current_user.is_admin %>
-
-<h1></h1>
 
 <div class="match-details-box">
 	
@@ -238,7 +236,16 @@
 
 <% @all_users.each do |user|%>
 
-<h3 class="white text-center"><%= user.name %> / <%= link_to "Delete", user_path(user.id), method: :delete %></h3>
+
+<h3 class="white text-center">
+
+<% if user.picture %>
+
+<%= image_tag("#{user.picture}", id:"profile-img-admin", class:"img-rounded") %>
+
+<% end %>
+
+<%= user.name %> / <%= link_to "Delete", user_path(user.id), method: :delete %></h3>
 
 <% end %>
 
