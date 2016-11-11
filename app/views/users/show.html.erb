@@ -176,10 +176,6 @@
 
 <p class="coup-text bottom-right"><strong><i class="fa fa-angle-double-right"></i> <%= link_to "Redeem!", redeem_coupon_path(coupon), { method: :delete, :style=>'color:#FFFFFF;' } %></strong></p>
 
-<!-- ^^ Change link style to button ^^ -->
-<!-- :style=>'color:#FFFFFF;' -->
-<!-- <strong> </strong> -->
-
 </div>
 </div>
 
@@ -230,27 +226,29 @@
 
 <% if current_user.is_admin %>
 
-<div class="match-details-box">
-	
-<h1 class="white text-center font_lg"><u>Admin: (all users)</u></h1>
+	<div class="match-details-box">
+		
+		<h1 class="white text-center font_lg"><u>Admin</u>: (all users)</h1>
 
-<% @all_users.each do |user|%>
+		<% @all_users.each do |user|%>
 
+			<div class="col-md-6">
 
-<h3 class="white text-center">
+				<h3 class="white text-center">
 
-<% if user.picture %>
+				<% if user.picture %>
 
-<%= image_tag("#{user.picture}", id:"profile-img-admin", class:"img-rounded") %>
+				<%= image_tag("#{user.picture}", id:"profile-img-admin", class:"img-rounded") %>
 
-<% end %>
+				<% end %>
 
-<%= user.name %> / <%= link_to "Delete", user_path(user.id), method: :delete %></h3>
+				<%= user.name %> / <%= link_to "Delete", user_path(user.id), method: :delete %></h3>
 
-<% end %>
+			</div>
 
+		<% end %>
 
-</div>
+	</div>
 
 <% end %>
 
