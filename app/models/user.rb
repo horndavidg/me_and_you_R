@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
 	has_many :accolades, dependent: :destroy
 
 	has_secure_password
-	 
+
 
 # ---------------------------------------------
 
@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
 
 def self.from_omniauth(auth)
     # where(user_params.slice(user_params[:provider], user_params[:uid])).first_or_initialize.tap do |user|
-   
+
       where(name: auth.info.name).first_or_create do |user|     
       user.provider = auth.provider
       user.uid = auth.uid
