@@ -145,6 +145,15 @@ before_action :find_match, only: [:add_match, :no_match, :destroy, :remove_match
 
    @user.update user_params
 
+   # Re-saves user's name to match in case that was updated, match 
+   # holds user's name in its Active Record Object: 
+
+  if @user.match     
+   match_user = User.find_by_id(@user.match_id)
+   match_user.match = @user.name
+   match_user.save
+  end
+
    if @user.save
       redirect_to user_path(@current_user), flash: {success: "Information updated!"}
     else
