@@ -22,7 +22,8 @@
  // Then bootstrap itself
  @import "bootstrap";
  @import "bootstrap-sprockets";
- @import "bootswatch/united/variables";
+ /* Removed: unable to locate file */
+ /* @import "bootswatch/united/variables"; */
 
  @import "bootswatch/united/bootswatch";
 
