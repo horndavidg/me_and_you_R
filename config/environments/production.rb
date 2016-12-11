@@ -1,6 +1,20 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # config for mailer
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+
+   config.action_mailer.smtp_settings = {
+    :address   => "smtp.mailgun.org",
+    :port      => 587, # ports 587 and 2525 are also supported with STARTTLS
+    :enable_starttls_auto => true, # detects and uses STARTTLS
+    :domain => "mg.davidhorndev.com",
+    :user_name => Rails.application.secrets[:MG_USERNAME], # email used to signup for mandrill
+    :password  => Rails.application.secrets[:MG_PASSWORD], # SMTP password is any valid API key
+  }
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
