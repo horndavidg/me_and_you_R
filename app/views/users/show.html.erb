@@ -234,20 +234,26 @@
 
 		<% @all_users.each do |user|%>
 
-			<div class="col-md-6">
+			<!-- Removes current admins from the admin box -->
 
-				<h3 class="white text-left">
+			<% if !user.is_admin %>
 
-				<% if user.picture %>
+				<div class="col-md-6">
 
-				<%= image_tag("#{user.picture}", id:"profile-img-admin", class:"img-rounded") %>
+					<h3 class="white text-left">
 
-				<% end %>
+					<% if user.picture %>
 
-				<%= user.name %> / <%= link_to "Delete", user_path(user.id), method: :delete %></h3>
+					<%= image_tag("#{user.picture}", id:"profile-img-admin", class:"img-rounded") %>
 
-			</div>
+					<% end %>
 
+					<%= user.name %> / <%= link_to "Delete", user_path(user.id), method: :delete %></h3>
+
+				</div>
+			
+			<% end %>
+		
 		<% end %>
 
 	</div>

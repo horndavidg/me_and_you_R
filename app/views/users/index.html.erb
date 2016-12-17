@@ -1,14 +1,26 @@
-<h1 class="font_lg text-center margin_top"><u>Find Your Match</u></h1>
+<!-- <h1 class="font_lg text-center margin_top"><u>Find Your Match</u></h1> -->
 
-<div class="all-user-box">
-<h2 class="white text-center font_md"><u>Availible Matches</u></h2>
+<div class="all-user-box margin_top container">
 
-<% @all_users.each do |user|%>
+<h2 class="white text-center font_lg"><u>Availible Matches</u></h2>
 
-<% if user.match == nil && user.name != @current_user.name %>
+	<% @all_users.each do |user|%>
 
-<h5 class="white text-center"><%= user.name%>  <%= link_to "Match", match_path(user.id), method: :post %></h5>
+		<% if user.match == nil && user.name != @current_user.name %>
 
-   <% end %>
-<% end %>
+			<div class="col-md-6">
+
+			<h3 class="white text-left">
+
+			<% if user.picture %>
+			<%= image_tag("#{user.picture}", id:"profile-img-admin", class:"img-rounded") %>
+			<% end %>
+
+			<%= user.name%> / <%= link_to "Match", match_path(user.id), method: :post %></h3>
+
+			</div>
+	    <% end %>
+	<% end %>
 </div>
+
+<p class="help-block font_md notes_below text-center"><strong>Help:</strong> Matches are listed by Name so you need to know your Matches Account Name in order to find them. If you do not see your Matches name listed then that means they do not have an account and need to Sign Up!</p>
