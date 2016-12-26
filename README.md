@@ -1,5 +1,8 @@
-### Me & You....
+### Me & You
 
+*Me & You is an app developed to help improve a couples ability to show love and appreciation for each other in a way that works.*
+
+[Check it out!](https://meandyou.herokuapp.com/login)
 
 Auth Help:
 
