@@ -11,6 +11,7 @@ match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
 
   get 'login', to: "sessions#login", as: "login"
   get 'signup', to: "sessions#signup", as: "signup"
+  get 'search', to: "users#search", as: "search"
   post 'login', to: "sessions#attempt_login"
   delete 'logout', to: "sessions#logout", as: "logout"
   post 'match/:id', to: "users#match", as: "match"

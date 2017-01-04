@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   
 before_action :confirm_logged_in, except: [:create]
-before_action :ensure_correct_user, except: [:create, :index, :match, :destroy]
+before_action :ensure_correct_user, except: [:create, :index, :match, :destroy, :search]
 before_action :set_user, only: [:edit, :update, :destroy, :show, :remove_match]
 before_action :unmatched_user, only: [:index]
 before_action :find_match, only: [:add_match, :no_match, :destroy, :remove_match, :show]
@@ -10,6 +10,25 @@ before_action :find_match, only: [:add_match, :no_match, :destroy, :remove_match
 
   def index
     @all_users = User.all
+
+  end
+
+# ---------------------------------------------
+
+  def search
+  
+  # binding.pry
+    
+@found_user = User.find_by(name: params[:name])
+
+if @found_user    
+     render "users/index"
+    else
+     redirect_to users_path, flash: {alert: "No Users Found by that Name!"}
+end
+
+
+
   end
 
 # ---------------------------------------------
