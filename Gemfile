@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 # Declared a Ruby version
 ruby '2.2.4'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 # Use postgresql as the database for Active Record
@@ -31,7 +32,6 @@ gem 'font-awesome-sass'
 
 # Enables all platform features on Heroku
 gem 'rails_12factor'
-
 
 
 gem 'dotenv-rails', :groups => [:development, :test]
