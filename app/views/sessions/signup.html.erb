@@ -16,8 +16,10 @@
           <%= f.email_field :email, class:"form-control" %>
         </div>
         <div class="form-group">
-          <%= f.label :picture, class:"control-label" %>
-          <%= f.url_field :picture, class:"form-control", placeholder:"URL Please (optional)" %>
+          <%= f.label :picture, class:"control-label pad-sm-r" %>
+          
+          <%= f.uploadcare_field :picture, class:"form-control" %>
+
         </div>
 
         <div class="form-group">

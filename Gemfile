@@ -57,6 +57,7 @@ gem 'sidekiq'
 
 gem 'activerecord-import', '~> 0.7.0'
 
+gem 'uploadcare-rails', "~> 1.0"
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'

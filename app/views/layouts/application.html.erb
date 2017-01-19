@@ -8,6 +8,12 @@
 
 <%= render partial: 'shared/theme_header' %>
 
+<!-- Brings in Uploadcare Functionality -->
+<!-- <%= include_uploadcare_widget_from_cdn version: "2.10.2", min: true %> -->
+<!-- Removed because it was calling the wrong cdn url -->
+<%= uploadcare_settings %>
+
+
 </head>
 <body class="<%= @landing_page ? 'flower' : ''%>">
 
