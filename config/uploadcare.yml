@@ -17,6 +17,8 @@ defaults: &defaults
   # deletes file or group after model object is deleted
   delete_after_destroy: true
 
+
+
   # Avaliable options are listed at https://uploadcare.com/documentation/widget/#advanced-configuration
   # please note, that for options marker as Global: N/A - there is no practical meaning
   # of putting this option here, as it will not have any effect. 
@@ -69,16 +71,3 @@ test:
   autostore: false
 production:
   <<: *defaults
-
-
- 
-    # role="uploadcare-uploader"
-    # data-public-key="3a61664131ec72813421"
-    # data-tabs="file camera url facebook gdrive gphotos dropbox instagram evernote flickr skydrive"
-    # data-image-shrink="1024x1024 80%"
-    # data-images-only="true"
-    # data-preview-step="true"
-    # data-clearable="true"
-    # data-multiple="false"
-    # data-system-dialog="false"
-    # data-crop="400:300"

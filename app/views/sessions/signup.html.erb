@@ -18,7 +18,9 @@
         <div class="form-group">
           <%= f.label :picture, class:"control-label pad-sm-r" %>
           
-          <%= f.uploadcare_field :picture, class:"form-control" %>
+       <!-- Add user options for uploading pictures to Uploadcare here -->
+
+          <%= f.uploadcare_field :picture, class:"form-control", :data => {:crop => '100x100', :"images-only" => 'true'} %>
 
         </div>
 
