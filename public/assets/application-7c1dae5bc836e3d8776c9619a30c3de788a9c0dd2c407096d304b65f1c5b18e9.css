@@ -20561,12 +20561,28 @@ span.nobr {
   background-color: #5E5D5E;
 }
 
-/* line 150, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+/* line 151, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
 .avatar {
   width: 30px;
 }
 
 /* line 156, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+.footer-copy {
+  font-size: 16px;
+  font-family: 'Averia Serif Libre', cursive;
+}
+
+/* line 165, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+.fix-height {
+  max-height: 60px;
+}
+
+/* line 172, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+.footer-v-center {
+  padding-top: 1.2%;
+}
+
+/* line 181, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
 #profile-img {
   width: 80px;
   float: left;
@@ -20575,15 +20591,20 @@ span.nobr {
   margin-right: auto;
 }
 
-/* line 164, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+/* line 189, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
 #profile-img-admin {
   width: 80px;
   max-height: 60px;
 }
 
-/* line 174, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+/* line 199, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
 .fb-button {
   height: 30px;
+}
+
+/* line 203, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+.pad-sm-r {
+  padding-right: 4%;
 }
 /* line 5, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
 .pad-md {
@@ -20631,7 +20652,7 @@ span.nobr {
   background: rgba(66, 7, 16, 0.6);
   border-style: solid;
   border-color: white;
-  overflow: scroll;
+  overflow: auto;
   padding-bottom: 10px;
 }
 
@@ -20641,7 +20662,7 @@ span.nobr {
   background: rgba(223, 255, 240, 0.6);
   border-style: solid;
   border-color: white;
-  overflow: scroll;
+  overflow: auto;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10px;
@@ -20661,7 +20682,7 @@ span.nobr {
   background: rgba(223, 255, 240, 0.6);
   border-style: solid;
   border-color: grey;
-  overflow: scroll;
+  overflow: auto;
   margin-left: auto;
   margin-right: auto;
 }
