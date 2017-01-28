@@ -145,10 +145,35 @@ text-shadow:
 
   background-color: #5E5D5E;  
     // #5E5D5E Footer Color
+
 }
 
 .avatar {
   width: 30px;
+}
+
+
+.footer-copy {
+
+font-size: 16px;
+font-family: 'Averia Serif Libre', cursive;
+
+}
+
+// Sets the footer height to allow for padding
+
+.fix-height {
+
+// fix-height: 60px;
+max-height: 60px;
+
+}
+
+.footer-v-center{
+
+// line-height: 60px;
+padding-top: 1.2%;
+
 }
 
 // padding can cause the rounded image to be cut off on one side
