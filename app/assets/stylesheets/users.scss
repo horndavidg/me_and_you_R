@@ -60,6 +60,8 @@ margin-top: 1%;
     border-color: white;
     overflow: auto;
     padding-bottom: 10px;
+    padding-right: .7%;
+    padding-left: .7%;
 
 }
 
@@ -80,22 +82,23 @@ margin-top: 1%;
 
 .kudo-box-points {
 
-float: left;
-border-right: 2px solid;
-margin-right: 4px;
-padding: 6px;
+    float: left;
+    border-right: 2px solid;
+    margin-right: 4px;
+    padding: 6px;
 
 }
 
 .kudo-box-created {
 
-    width: 520px;
+    // width: 520px;
     background: rgba(223, 255, 240, 0.6);
     border-style: solid;
     border-color: grey;
     overflow: auto;
     margin-left: auto;
     margin-right: auto;
+    padding: .5%;
 
 }
 

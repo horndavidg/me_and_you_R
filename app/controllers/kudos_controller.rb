@@ -27,12 +27,20 @@ class KudosController < ApplicationController
      @kudo.creator_id = @user.id 
      @kudo.creator_name = @user.name
 
+     # For mailer:
+      match = User.find @current_user.match_id
+      kudo = @kudo
+
      if @kudo.save
      # @user.kudos << @kudo
  		 @match_user.kudos << @kudo
      @match_user.score += @kudo.points
      @match_user.save
      # binding.pry
+     
+     # Uncomment out to send Kudo given emails!
+     Give.give_notification(match,kudo).deliver_now
+
      redirect_to user_path(@current_user), flash: {success: "Kudo Given, Nice!"}
      
          else

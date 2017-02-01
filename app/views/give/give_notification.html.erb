@@ -1,0 +1,31 @@
+<h1><%= @match.match %> has given you a Kudo!</h1>
+
+<div style="height: 260px;
+    background: rgba(223, 255, 240, 0.6);
+    border-style: solid;
+    border-color: white;
+    overflow: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;">
+
+
+<div style="float: left;
+    border-right: 2px solid;
+    margin-right: 4px;
+    padding: 6px;">
+
+<p><strong><u>Points:</u></strong></p>
+
+<h1 style="padding: 6px;"><%= @kudo.points %></h1>	
+</div>
+
+<% if @kudo.date %>
+<p><strong>Date:</strong> <%= @kudo.date.strftime("%m/%d/%Y") %></p>
+<% end %>
+
+<p style="font-size: 20px;
+font-family: 'Averia Serif Libre', cursive; 
+padding: 6px;"><%= @kudo.description %></p>
+
+</div>

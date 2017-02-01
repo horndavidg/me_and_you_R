@@ -6576,7 +6576,7 @@ html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:1
   padding: 2%;
   border: 5px dashed white;
   height: 260px;
-  overflow: scroll;
+  overflow: auto;
 }
 
 /* line 15, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/coupons.scss */
@@ -20654,9 +20654,11 @@ span.nobr {
   border-color: white;
   overflow: auto;
   padding-bottom: 10px;
+  padding-right: .7%;
+  padding-left: .7%;
 }
 
-/* line 66, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
+/* line 68, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
 .kudo-box {
   height: 260px;
   background: rgba(223, 255, 240, 0.6);
@@ -20668,7 +20670,7 @@ span.nobr {
   margin-bottom: 10px;
 }
 
-/* line 81, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
+/* line 83, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
 .kudo-box-points {
   float: left;
   border-right: 2px solid;
@@ -20676,18 +20678,18 @@ span.nobr {
   padding: 6px;
 }
 
-/* line 90, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
+/* line 92, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
 .kudo-box-created {
-  width: 520px;
   background: rgba(223, 255, 240, 0.6);
   border-style: solid;
   border-color: grey;
   overflow: auto;
   margin-left: auto;
   margin-right: auto;
+  padding: .5%;
 }
 
-/* line 102, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
+/* line 105, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
 .edit_user_form {
   margin-top: 12%;
   background: rgba(223, 255, 240, 0.6);
