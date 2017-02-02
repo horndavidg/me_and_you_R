@@ -18,8 +18,14 @@
           <%= f.email_field :email, class:"form-control" %>
         </div>
         <div class="form-group">
-          <%= f.label :picture, class:"control-label" %>
-          <%= f.url_field :picture, class:"form-control", placeholder:"URL Please (optional)" %>
+          <%= f.label :picture, class:"control-label pad-sm-r" %>
+
+        <!-- Add user options for uploading / editing pictures to Uploadcare here -->
+
+          <%= f.uploadcare_field :picture, class:"form-control", :data => {:crop => '100x100', :"images-only" => 'true'} %>
+
+          <p class="help-block">* Pictures need to be uploaded via Uploadcare, if you haven’t uploaded an image yet click “Choose an image”, otherwise click the image link to update your current picture.</p>
+
         </div>
 
         <%= f.submit "Update My Account", id:"submit-user", class:"btn btn-block btn-success text-center" %>

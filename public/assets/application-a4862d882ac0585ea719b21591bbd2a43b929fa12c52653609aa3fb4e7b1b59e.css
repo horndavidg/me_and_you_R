@@ -20686,10 +20686,11 @@ span.nobr {
   overflow: auto;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: .7%;
   padding: .5%;
 }
 
-/* line 105, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
+/* line 106, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
 .edit_user_form {
   margin-top: 12%;
   background: rgba(223, 255, 240, 0.6);
