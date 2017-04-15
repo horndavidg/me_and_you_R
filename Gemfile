@@ -36,8 +36,11 @@ gem 'rails_12factor'
 
 gem 'dotenv-rails', :groups => [:development, :test]
 
-gem 'omniauth', '~> 1.2.2'
-gem 'omniauth-facebook', '1.4.0'
+# trying to get omniauth-facebook working
+# gem 'omniauth', '~> 1.2.2'
+gem 'omniauth', '~> 1.6.1'
+# gem 'omniauth-facebook', '1.4.0'
+gem 'omniauth-facebook', '4.0.0'
 
 gem 'json'
 gem 'handlebars_assets'
