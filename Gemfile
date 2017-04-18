@@ -25,14 +25,12 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem "bootstrap-sass"
-gem "bootswatch-rails"
+gem 'bootstrap-sass'
+gem 'bootswatch-rails'
 gem 'font-awesome-sass'
-
 
 # Enables all platform features on Heroku
 gem 'rails_12factor'
-
 
 gem 'dotenv-rails', :groups => [:development, :test]
 
@@ -42,14 +40,14 @@ gem 'omniauth', '~> 1.6.1'
 # gem 'omniauth-facebook', '1.4.0'
 gem 'omniauth-facebook', '4.0.0'
 
-gem 'json'
 gem 'handlebars_assets'
+gem 'json'
 
 group :development do
-  gem 'pry-rails'
   gem 'awesome_print'
-  gem 'binding_of_caller'
   gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'pry-rails'
 end
 
 gem 'puma'
@@ -60,7 +58,7 @@ gem 'sidekiq'
 
 gem 'activerecord-import', '~> 0.7.0'
 
-gem 'uploadcare-rails', "~> 1.0"
+gem 'uploadcare-rails', '~> 1.0'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
@@ -75,14 +73,14 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
-  gem 'rspec-rails', '~> 3.0'
-  gem 'shoulda-matchers'
-  gem "capybara"  
+  gem 'capybara'
   gem 'capybara-email'
-  gem 'launchy'
-  gem 'shoulda'
-  gem 'puma-rails'
   gem 'guard-rspec', require: false
+  gem 'launchy'
+  gem 'puma-rails'
+  gem 'rspec-rails', '~> 3.0'
+  gem 'shoulda'
+  gem 'shoulda-matchers'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
@@ -90,4 +88,3 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
