@@ -8,6 +8,7 @@
 
 <%= render partial: 'shared/theme_header' %>
 
+
 <!-- Brings in Uploadcare Functionality -->
 
 <%= uploadcare_settings %>
@@ -16,7 +17,6 @@
 </head>
 <body class="<%= @landing_page ? 'flower' : ''%>">
 
-
 <!-- Custom Navbar -->
 
  <nav id="mainNav" class="navcolor navbar navbar-default navbar-fixed-top">
@@ -24,6 +24,9 @@
 <!-- navbar-fixed-top : affects spcaing but makes it fill the space -->
 
     <div class="container-fluid">
+
+
+
       <div class="navbar-header">
 
 
@@ -55,20 +58,31 @@
       <% end %> 
       
     </li>
-</ul>
 
 
-      </div>
 
-      
- 
- <button type = "button" class = "navbar-toggle" 
-         data-toggle = "collapse" data-target = "#bs-example-navbar-collapse-1">
-         <span class = "sr-only">Toggle navigation</span>
+
+
+
+
+
+<!-- placed button inside <ul> so they don't overlap -->
+
+   <button type = "button" class = "navbar-toggle navbar-text navbar-right" data-toggle = "collapse" data-target = "#bs-example-navbar-collapse-1">
+         
          <span class = "icon-bar"></span>
          <span class = "icon-bar"></span>
          <span class = "icon-bar"></span>
       </button>
+ 
+
+  </ul>
+     
+ </div>
+
+      
+ 
+
 
 <!-- the class "collapse" triggers an event where content is hidden and collapse is toggled -->
 
@@ -90,16 +104,32 @@
            <!-- snip 1 -->
 
           <% else %>
-            <li><%= link_to "Login Please", login_path, {:style => 'color: white'} %> </li>
+            <li><%= link_to "Login Please", login_path, {:style => 'color: white', :class => 'text-center'} %> </li>
 
            <!-- FB Login Button -->
            
-            <li><%= link_to (image_tag"facebook-login-button-002.png", class:"fb-button"), "/auth/facebook", id: "sign_in", :style => 'color: white' %></li>
+          <li><%= link_to "Facebook Login", "/auth/facebook", {:style => 'color: white', :class => 'text-center'} %> </li>
+
+            <!-- removed picture and decided to go with a straight text link -->
+
+            <!-- <%= link_to (image_tag"facebook-login-button-002.png", class:"fb-button"), "/auth/facebook", id: "sign_in", :style => 'color: white' %> -->
 
           <% end %>
         </ul>
+
+
+
+
+
+
       </div>
+
+
+
     </div>
+
+
+
   </nav>
 
 <!--   End Navbar -->
