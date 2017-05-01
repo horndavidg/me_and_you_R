@@ -2,17 +2,32 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+// Working with media queries to help responsive design
+
+@media (max-width: 780px) {
+  .margin_top {
+    margin-top: 20%;
+  }
+}
+
+@media (min-width: 780px) {
+  .margin_top {
+    margin-top: 12%;
+  }
+}
+
+
+
 .pad-md {
 
 padding: 6px;
 
 }
 
-.margin_top {
-
-margin-top: 8%;
-
-}
+// .margin_top {
+// margin-top: 12%;
+// }
 
 .margin_top_sm {
 
@@ -21,6 +36,8 @@ margin-top: 1%;
 }
 
 .all-user-box {
+
+// Work on width for responsive design
 
 	background: rgba(66, 7, 16, 0.6);
     border-style: solid;

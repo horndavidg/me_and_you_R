@@ -5,7 +5,12 @@
  <%= render partial: 'shared/alerts' %>
 
     <div class="well">
-      <h2 class="font_lg text-center">Log into <span class="nobr">Me & You</span></h2><br>
+     
+      <h2 class="font_lg text-center">Log in:</h2>
+
+      <!-- adding no break site name breaks layout in certain viewports -->
+
+      <!-- <h2 class="font_lg text-center">Log into <span class="nobr">Me & You</span></h2><br> -->
      
       <%= form_tag login_path do %>
         <div class="form-group">

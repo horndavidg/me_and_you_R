@@ -6,9 +6,20 @@
 <nav class="navcolor navbar navbar-default navbar-fixed-bottom fix-height">
   <div class="container">
 
+<!-- testing out media queries that work on viewport width -->
 
-<!-- added collapse so note below is gone on S viewports allowing the user to see the share buttons on mobile -->
-	<ul class="list-inline navbar-left footer-v-center collapse">
+<style>
+@media (max-width: 780px) {
+  .user-note {
+    display: none;
+  }
+}
+</style>
+
+<!-- removes below text when viewport sized down -->
+
+
+	<ul class="list-inline navbar-left footer-v-center user-note">
 	  
 		<li>
 		  <p class="help-block footer-copy">* Me & You needs Google Chrome Desktop to function as expected</p>
