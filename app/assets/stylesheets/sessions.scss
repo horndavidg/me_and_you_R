@@ -83,6 +83,17 @@ font-family: 'Averia Serif Libre', cursive;
 
 }
 
+// Custom font size for emails as they can be lengthy
+.font_email {
+  font-size: 26px;
+  // font-family: 'Indie Flower', cursive;
+  font-family: 'Averia Serif Libre', cursive;
+}
+
+
+
+
+
 // CSS for informational notes below forms and/or boxes
 .notes_below {
   margin-top: 2%;
