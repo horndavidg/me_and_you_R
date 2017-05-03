@@ -5,19 +5,37 @@
 
 // Working with media queries to help responsive design
 
-@media (max-width: 780px) {
+// S Vieports
+
+@media (max-width: 400px) {
+  .mobile_margin {
+    margin-top: 5%;
+  }
   .margin_top {
     margin-top: 38%;
   }
 }
 
-@media (min-width: 780px) {
+// M Viewports
+
+@media (max-width: 990px) and (min-width: 401px) {
+  .mobile_margin {
+    margin-top: 5%;
+  }
+  .margin_top {
+    margin-top: 20%;
+  }
+}
+
+// L Viewports
+
+@media (min-width: 990px) {
   .margin_top {
     margin-top: 12%;
   }
 }
 
-
+// ----------------------------------------------------
 
 .pad-md {
 
@@ -123,7 +141,7 @@ margin-top: 1%;
 
 .edit_user_form {
     // css for edit your information form
-    margin-top: 12%;
+    // margin-top: 12%;
     // margin-left: 600px;
     // margin-right: auto;
     background: rgba(223, 255, 240, 0.6);
