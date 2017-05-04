@@ -30,16 +30,12 @@
 
 <div class="col-md-6">
 
-<!-- <h1 class="text-center font_lg">Me: <%= current_user.name %></h1> -->
-
 <!-- Logic checking if the user entered a valid email -->
 
 <% if current_user.email === "Please add email!" %>
 
 <div class="text-center"><%= link_to "Please add email!", edit_user_path(@current_user), class:"font_lg" %></div>
 
-<% else %>
-<!-- <h1 class="text-center font_email"><%= current_user.email %></h1> -->
 <% end %>
 
 
