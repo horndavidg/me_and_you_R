@@ -43,10 +43,11 @@
 
      <% if @current_user %>
 
-       <ul class="dropdown-menu" id="pulled-nav-elements"> 
+       <ul class="dropdown-menu pad-drop-down" id="pulled-nav-elements"> 
 
              <!-- right now the collapse button is pulling this list "#test" -->
 
+            <li><strong><%= @current_user.email %></strong></li>
             <li><%= link_to "My Page", user_path(@current_user) %></li>
             <li><%= link_to "Edit My Account", edit_user_path(@current_user) %></li>
             <li><%= link_to "Our Page", kudos_path %></li>
@@ -112,6 +113,9 @@
         <ul class="nav navbar-nav navbar-right">
           <% if @current_user %>
              
+               <!-- adds the name of the current user to the global nav -->
+               <li class="navbar-text" style="color: white"><%= @current_user.name %></li>
+
                <% if @current_user.picture != ""%>
              
                <li class="navbar-text"><%= image_tag("#{current_user.picture}", class:"img-rounded avatar") %></li>
@@ -123,13 +127,10 @@
           <% else %>
             <li><%= link_to "Email Login", login_path, {:style => 'color: white', :class => 'text-center'} %> </li>
 
-           <!-- FB Login Button -->
+           <!-- FB Login link -->
            
           <li><%= link_to "Facebook Login", "/auth/facebook", {:style => 'color: white', :class => 'text-center'} %> </li>
 
-            <!-- removed picture and decided to go with a straight text link -->
-
-            <!-- <%= link_to (image_tag"facebook-login-button-002.png", class:"fb-button"), "/auth/facebook", id: "sign_in", :style => 'color: white' %> -->
 
           <% end %>
         </ul>

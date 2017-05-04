@@ -94,8 +94,11 @@ font-family: 'Averia Serif Libre', cursive;
   font-family: 'Averia Serif Libre', cursive;
 }
 
+// ----------------------------------------------------
 
 // Working with media queries to help responsive design
+
+// FONTS AND GLOBAL NAV / DROP DOWN MENU
 
 // S Vieports
 
@@ -103,6 +106,9 @@ font-family: 'Averia Serif Libre', cursive;
   .font_resp {
    font-size: 30px;
    // font-family: 'Averia Serif Libre', cursive;
+  }
+  .pad-drop-down {
+   padding: 2%;
   }
 }
 
@@ -113,6 +119,9 @@ font-family: 'Averia Serif Libre', cursive;
    font-size: 36px;
    // font-family: 'Averia Serif Libre', cursive;
   }
+  .pad-drop-down {
+   padding: 2%;
+  }
 }
 
 // L Viewports
@@ -121,6 +130,9 @@ font-family: 'Averia Serif Libre', cursive;
   .font_resp {
    font-size: 40px;
    // font-family: 'Averia Serif Libre', cursive;
+  }
+  .pad-drop-down {
+   padding: 8%;
   }
 }
 
@@ -242,13 +254,17 @@ padding-top: 1.2%;
   // margin-right: auto; 
 }
 
+#profile-img-match {
+  width: 80px;
+  max-height: 60px;
+  margin-bottom: 2%;
+
+}
 
 .fb-button {
   height: 30px;
 }
 
 .pad-sm-r {
-
 padding-right: 4%;
-
 }

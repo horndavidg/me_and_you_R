@@ -151,6 +151,8 @@ end
       @match_user = User.find_by_id(@current_user.match_id)  
       end
 
+     # binding.pry
+
   end
 
 # ---------------------------------------------
