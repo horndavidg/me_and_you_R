@@ -76,6 +76,10 @@ font-family: 'Averia Serif Libre', cursive;
   font-family: 'Averia Serif Libre', cursive;
 }
 
+.font_main {
+  font-family: 'Averia Serif Libre', cursive;
+}
+
 .font_nav {
   font-size: 30px;
   // font-family: 'Indie Flower', cursive;
@@ -91,6 +95,36 @@ font-family: 'Averia Serif Libre', cursive;
 }
 
 
+// Working with media queries to help responsive design
+
+// S Vieports
+
+@media (max-width: 450px) {
+  .font_resp {
+   font-size: 30px;
+   // font-family: 'Averia Serif Libre', cursive;
+  }
+}
+
+// M Viewports
+
+@media (max-width: 990px) and (min-width: 451px) {
+  .font_resp {
+   font-size: 36px;
+   // font-family: 'Averia Serif Libre', cursive;
+  }
+}
+
+// L Viewports
+
+@media (min-width: 990px) {
+  .font_resp {
+   font-size: 40px;
+   // font-family: 'Averia Serif Libre', cursive;
+  }
+}
+
+// ----------------------------------------------------
 
 
 

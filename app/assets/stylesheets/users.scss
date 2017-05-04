@@ -7,7 +7,7 @@
 
 // S Vieports
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   .mobile_margin {
     margin-top: 5%;
   }
@@ -18,12 +18,12 @@
 
 // M Viewports
 
-@media (max-width: 990px) and (min-width: 401px) {
+@media (max-width: 990px) and (min-width: 451px) {
   .mobile_margin {
     margin-top: 5%;
   }
   .margin_top {
-    margin-top: 20%;
+    margin-top: 16%;
   }
 }
 
