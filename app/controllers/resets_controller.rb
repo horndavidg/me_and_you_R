@@ -2,7 +2,6 @@ class ResetsController < ApplicationController
 
 before_action :landing_page, only: [:new, :edit, :update]
 
-
 def new
   
 
