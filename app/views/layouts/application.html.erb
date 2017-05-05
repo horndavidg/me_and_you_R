@@ -45,9 +45,9 @@
 
        <ul class="dropdown-menu pad-drop-down" id="pulled-nav-elements"> 
 
-             <!-- right now the collapse button is pulling this list "#test" -->
+             <!-- right now the collapse button is pulling this list "#pulled-nav-elements" -->
 
-            <li><strong><%= @current_user.email %></strong></li>
+            <li><strong><u><%= @current_user.email %></u></strong></li>
             <li><%= link_to "My Page", user_path(@current_user) %></li>
             <li><%= link_to "Edit My Account", edit_user_path(@current_user) %></li>
             <li><%= link_to "Our Page", kudos_path %></li>
@@ -65,7 +65,7 @@
 
        <ul class="dropdown-menu" id="pulled-nav-elements"> 
 
-             <!-- right now the collapse button is pulling this list "#test" -->
+             <!-- right now the collapse button is pulling this list "#pulled-nav-elements" -->
              <!-- this list shows if there is not a current user (login/signup) -->
 
           <li><%= link_to "Email Login", login_path %></li>
@@ -77,9 +77,6 @@
       <% end %> 
       
     </li>
-
-
-
 
 
 <!-- placed button inside <ul> so they don't overlap -->
@@ -98,8 +95,6 @@
      
  </div>
 
-      
- 
 
 
 <!-- the class "collapse" triggers an event where content is hidden and collapse is toggled -->
@@ -133,20 +128,12 @@
 
 
           <% end %>
+       
         </ul>
-
-
-
-
-
 
       </div>
 
-
-
     </div>
-
-
 
   </nav>
 

@@ -193,18 +193,20 @@ text-shadow:
 }
 
 .white {
+
   color: white;
+  
 }
 
 .red {
+
   color: rgb(66, 7, 16);
+
 }
 
 .navcolor {
-
   background-color: #5E5D5E;  
-    // #5E5D5E Footer Color
-
+  // #5E5D5E Footer Color
 }
 
 .avatar {
@@ -213,25 +215,21 @@ text-shadow:
 
 
 .footer-copy {
-
-font-size: 16px;
-font-family: 'Averia Serif Libre', cursive;
-
+  font-size: 16px;
+  font-family: 'Averia Serif Libre', cursive;
 }
 
 // Sets the footer height to allow for padding
 
 .fix-height {
-
-// fix-height: 60px;
-max-height: 60px;
+  // fix-height: 60px;
+  max-height: 60px;
 
 }
 
 .footer-v-center{
-
-// line-height: 60px;
-padding-top: 1.2%;
+  // line-height: 60px;
+  padding-top: 1.2%;
 
 }
 
@@ -247,11 +245,7 @@ padding-top: 1.2%;
 
 #profile-img-admin {
   width: 80px;
-  max-height: 60px;
-  // float: bottom;
-  // padding-right: 2%;
-  // margin-left: auto;
-  // margin-right: auto; 
+  max-height: 60px; 
 }
 
 #profile-img-match {
@@ -262,9 +256,13 @@ padding-top: 1.2%;
 }
 
 .fb-button {
+
   height: 30px;
+
 }
 
 .pad-sm-r {
+
 padding-right: 4%;
+
 }
