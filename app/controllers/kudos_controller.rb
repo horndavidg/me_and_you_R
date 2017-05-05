@@ -1,5 +1,6 @@
 class KudosController < ApplicationController
   
+  before_action :confirm_logged_in
   before_action :unmatched_user, except: [:create]
   before_action :set_user, only: [:create, :destroy, :index]
   before_action :set_match, only: [:create, :destroy, :index]

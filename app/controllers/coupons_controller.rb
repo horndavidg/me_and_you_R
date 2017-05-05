@@ -1,5 +1,6 @@
 class CouponsController < ApplicationController
   
+before_action :confirm_logged_in
 before_action :set_user, only: [:create, :destroy, :index]
 
   def index
