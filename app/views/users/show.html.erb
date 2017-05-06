@@ -49,7 +49,7 @@
 <h1 class="text-center font_lg">Match:</h1>
 
 
-<h1 class="text-center font_lg">
+<h1 class="text-center font_main font_resp">
 
 <% if @match_user.picture %>
 
@@ -173,7 +173,7 @@
 
 <% if @user_bought_coupons.length > 0 %>
 
-<p class="font_lg"><u>Coupons to be Redeemed:</u></p>
+<p class="font_main font_resp pad-l-5"><u>Coupons to be Redeemed:</u></p>
 
 <% @user_bought_coupons.each do |coupon|%>
 
@@ -205,7 +205,7 @@
 
 <% if @recent_kudos.length > 0 %>
 
-<p class="font_lg"><u>Kudos Received:</u></p>
+<p class="font_main font_resp pad-l-5"><u>Kudos Received:</u></p>
 
 <% @recent_kudos.each do |kudo|%>
 

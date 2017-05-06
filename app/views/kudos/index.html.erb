@@ -1,4 +1,4 @@
-<div class="container margin_top pad-l-7">
+<div class="container margin_top">
 
 
 <!-- Row One User Kudos -->
@@ -7,7 +7,7 @@
 
 <div class="row">
   
-<p class="font_lg"><u>My Kudos:</u></p>
+<p class="font_lg pad-l-5"><u>My Kudos:</u></p>
 
 <% @user.kudos.each do |kudo|%>
 
@@ -39,7 +39,7 @@
 
 <% if @user_created_coupons.length > 0 %>
 
-<p class="font_lg"><u>My Coupons:</u></p>
+<p class="font_lg pad-l-5"><u>My Coupons:</u></p>
 
 <% @user_created_coupons.each do |coupon|%>
 
@@ -66,7 +66,7 @@
 
 <% if @match_user.kudos.length > 0 %>
 
-<p class="font_main font_resp"><u><%= @match_user.name%>'s Kudos:</u></p>
+<p class="font_main font_resp pad-l-5"><u><%= @match_user.name%>'s Kudos:</u></p>
 
 
 <% @match_user.kudos.each do |kudo|%>
@@ -99,7 +99,7 @@
 
 <% if @match_created_coupons.length > 0 %>
 
-<p class="font_main font_resp"><u><%= @match_user.name%>'s Coupons:</u></p>
+<p class="font_main font_resp pad-l-5"><u><%= @match_user.name%>'s Coupons:</u></p>
 
 <% @match_created_coupons.each do |coupon|%>
 
