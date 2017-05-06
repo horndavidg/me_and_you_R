@@ -6612,7 +6612,6 @@ html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:1
 /* line 60, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/coupons.scss */
 .coup-head {
   font-family: 'Roboto', sans-serif;
-  font-size: 40px;
   color: white;
 }
 
@@ -8443,12 +8442,11 @@ html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:1
 }
 /* line 6, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/kudos.scss */
 .kudo_form {
-  margin-top: 12%;
   padding: 2%;
   background: rgba(223, 255, 240, 0.6);
 }
 
-/* line 19, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/kudos.scss */
+/* line 14, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/kudos.scss */
 .coupon_form {
   margin-top: 12%;
   margin-bottom: 2%;
@@ -8456,12 +8454,12 @@ html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:1
   background: rgba(223, 255, 240, 0.6);
 }
 
-/* line 30, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/kudos.scss */
+/* line 24, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/kudos.scss */
 .pad {
   padding-top: 12%;
 }
 
-/* line 36, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/kudos.scss */
+/* line 30, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/kudos.scss */
 .margin_around {
   margin: 2%;
 }
@@ -20453,136 +20451,180 @@ body {
 
 /* line 25, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
 .welcome_box {
-  margin-top: 14%;
+  margin-top: 20%;
   margin-left: 50%;
   margin-right: 8%;
-  padding: 10px;
+  padding: 5px;
   background: rgba(66, 7, 16, 0.6);
-  min-width: 224px;
+  min-width: 150px;
 }
 
 /* line 43, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
 .auth_box {
   margin-top: 12%;
-  margin-left: 46%;
+  margin-left: 40%;
   margin-right: 8%;
-  min-width: 480px;
+  min-width: 300px;
 }
 
-/* line 56, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+/* line 58, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
 span.nobr {
   white-space: nowrap;
 }
 
-/* line 60, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+/* line 62, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
 .font_sm {
   font-family: 'Averia Serif Libre', cursive;
 }
 
-/* line 65, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+/* line 67, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
 .font_md {
   font-size: 20px;
   font-family: 'Averia Serif Libre', cursive;
 }
 
-/* line 71, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+/* line 73, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
 .font_lg {
   font-size: 48px;
   font-family: 'Averia Serif Libre', cursive;
 }
 
-/* line 77, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+/* line 79, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+.font_main {
+  font-family: 'Averia Serif Libre', cursive;
+}
+
+/* line 83, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
 .font_nav {
   font-size: 30px;
   font-family: 'Averia Serif Libre', cursive;
 }
 
-/* line 85, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+/* line 91, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+.font_email {
+  font-size: 26px;
+  font-family: 'Averia Serif Libre', cursive;
+}
+
+@media (max-width: 450px) {
+  /* line 106, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+  .font_resp {
+    font-size: 30px;
+  }
+
+  /* line 110, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+  .pad-drop-down {
+    padding: 2%;
+  }
+}
+@media (max-width: 990px) and (min-width: 451px) {
+  /* line 118, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+  .font_resp {
+    font-size: 36px;
+  }
+
+  /* line 122, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+  .pad-drop-down {
+    padding: 2%;
+  }
+}
+@media (min-width: 990px) {
+  /* line 130, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+  .font_resp {
+    font-size: 40px;
+  }
+
+  /* line 134, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+  .pad-drop-down {
+    padding: 8%;
+  }
+}
+/* line 144, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
 .notes_below {
   margin-top: 2%;
   margin-left: 10%;
   margin-right: 14%;
 }
 
-/* line 91, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+/* line 150, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
 .num_xl {
   font-size: 100px;
   color: white;
   text-shadow: -1px -1px 0 #000,   1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-/* line 106, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+/* line 165, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
 .nav-logo {
   max-width: 34px;
 }
 
-/* line 112, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+/* line 171, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
 .link_color:link {
   color: white;
 }
 
-/* line 115, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+/* line 174, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
 .link_color:visited {
   color: white;
 }
 
-/* line 118, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+/* line 177, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
 .link_color:hover {
   color: white;
 }
 
-/* line 121, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+/* line 180, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
 .link_color:active {
   color: white;
 }
 
-/* line 125, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+/* line 184, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
 .box-icon {
   font-size: 24px;
 }
 
-/* line 129, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+/* line 188, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
 #mainNav {
   border-radius: 0;
 }
 
-/* line 136, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+/* line 195, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
 .white {
   color: white;
 }
 
-/* line 140, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+/* line 201, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
 .red {
   color: #420710;
 }
 
-/* line 144, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+/* line 207, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
 .navcolor {
   background-color: #5E5D5E;
 }
 
-/* line 151, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+/* line 212, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
 .avatar {
   width: 30px;
 }
 
-/* line 156, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+/* line 217, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
 .footer-copy {
   font-size: 16px;
   font-family: 'Averia Serif Libre', cursive;
 }
 
-/* line 165, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+/* line 224, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
 .fix-height {
   max-height: 60px;
 }
 
-/* line 172, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+/* line 230, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
 .footer-v-center {
   padding-top: 1.2%;
 }
 
-/* line 181, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+/* line 238, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
 #profile-img {
   width: 80px;
   float: left;
@@ -20591,37 +20633,72 @@ span.nobr {
   margin-right: auto;
 }
 
-/* line 189, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+/* line 246, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
 #profile-img-admin {
   width: 80px;
   max-height: 60px;
 }
 
-/* line 199, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+/* line 251, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+#profile-img-match {
+  width: 80px;
+  max-height: 60px;
+  margin-bottom: 2%;
+}
+
+/* line 258, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
 .fb-button {
   height: 30px;
 }
 
-/* line 203, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
+/* line 264, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/sessions.scss */
 .pad-sm-r {
   padding-right: 4%;
 }
-/* line 5, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
+@media (max-width: 450px) {
+  /* line 11, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
+  .mobile_margin {
+    margin-top: 5%;
+  }
+
+  /* line 14, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
+  .margin_top {
+    margin-top: 38%;
+  }
+}
+@media (max-width: 990px) and (min-width: 451px) {
+  /* line 22, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
+  .mobile_margin {
+    margin-top: 5%;
+  }
+
+  /* line 25, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
+  .margin_top {
+    margin-top: 16%;
+  }
+}
+@media (min-width: 990px) {
+  /* line 33, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
+  .margin_top {
+    margin-top: 12%;
+  }
+}
+/* line 40, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
 .pad-md {
   padding: 6px;
 }
 
-/* line 11, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
-.margin_top {
-  margin-top: 8%;
+/* line 46, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
+.pad-l-7 {
+  padding-left: 7%;
 }
 
-/* line 17, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
+/* line 52, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
 .margin_top_sm {
   margin-top: 1%;
 }
 
-/* line 23, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
+/* line 58, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
 .all-user-box {
   background: rgba(66, 7, 16, 0.6);
   border-style: solid;
@@ -20631,22 +20708,22 @@ span.nobr {
   padding: 1%;
 }
 
-/* line 36, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
+/* line 73, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
 .search-box {
   background: rgba(255, 255, 255, 0.7);
   padding: 1%;
-  margin-top: 1%;
-  margin-left: 30%;
-  margin-right: 30%;
+  margin-top: 3%;
+  margin-left: 24%;
+  margin-right: 24%;
 }
 
-/* line 48, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
+/* line 85, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
 .box_align {
   margin-left: 46px;
   margin-top: 20px;
 }
 
-/* line 54, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
+/* line 91, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
 .match-details-box {
   height: 300px;
   background: rgba(66, 7, 16, 0.6);
@@ -20658,7 +20735,7 @@ span.nobr {
   padding-left: .7%;
 }
 
-/* line 68, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
+/* line 105, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
 .kudo-box {
   height: 260px;
   background: rgba(223, 255, 240, 0.6);
@@ -20668,17 +20745,18 @@ span.nobr {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10px;
+  padding-top: 4px;
 }
 
-/* line 83, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
+/* line 121, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
 .kudo-box-points {
   float: left;
   border-right: 2px solid;
-  margin-right: 4px;
-  padding: 6px;
+  margin-right: 14px;
+  padding: 8px;
 }
 
-/* line 92, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
+/* line 130, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
 .kudo-box-created {
   background: rgba(223, 255, 240, 0.6);
   border-style: solid;
@@ -20690,9 +20768,8 @@ span.nobr {
   padding: .5%;
 }
 
-/* line 106, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
+/* line 144, /Users/davidhorn/Desktop/personal_projects/me_and_you_R/app/assets/stylesheets/users.scss */
 .edit_user_form {
-  margin-top: 12%;
   background: rgba(223, 255, 240, 0.6);
   padding: 2%;
 }
