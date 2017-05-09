@@ -53,7 +53,7 @@
 
 <% if @match_user.picture %>
 
-<%= image_tag("#{@match_user.picture}", id:"profile-img-match", class:"img-rounded") %>
+<%= image_tag("#{@match_user.picture}", id:"profile-img-match", class:"img-rounded", alt:"") %>
 
 <% end %>
 
@@ -255,7 +255,7 @@
 
 					<% if user.picture %>
 
-					<%= image_tag("#{user.picture}", id:"profile-img-admin", class:"img-rounded") %>
+					<%= image_tag("#{user.picture}", id:"profile-img-admin", class:"img-rounded", alt:"") %>
 
 					<% end %>
 

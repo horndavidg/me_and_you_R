@@ -113,7 +113,7 @@
 
                <% if @current_user.picture != ""%>
              
-               <li class="navbar-text"><%= image_tag("#{current_user.picture}", class:"img-rounded avatar") %></li>
+               <li class="navbar-text"><%= image_tag("#{current_user.picture}", class:"img-rounded avatar", alt:"") %></li>
 
                 <% end %>
 

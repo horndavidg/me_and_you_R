@@ -14,7 +14,7 @@
 				<h4 class="white text-left">
 
 				<% if user.picture %>
-				<%= image_tag("#{user.picture}", id:"profile-img-admin", class:"img-rounded") %>
+				<%= image_tag("#{user.picture}", id:"profile-img-admin", class:"img-rounded", alt:"") %>
 				<% end %>
 
 				<%= user.name%> / <%= link_to "Match", match_path(user.id), method: :post %></h4>
