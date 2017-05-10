@@ -181,13 +181,13 @@
 
 <div id="coupon" class="design_<%= coupon.design_id %> img-rounded animated fadeInUpBig margin_around">
 	
-	<p class="coup-head">PRICE: <strong><%= coupon.price %></strong> points</p>
+	<p class="coup-head font_resp">PRICE: <strong><%= coupon.price %></strong> points</p>
 
 	<p class="coup-text"><strong>I get:</strong> <%= coupon.description %></p>
 
 <!-- Coupon Redeem -->
 
-<p class="coup-text bottom-right"><strong><i class="fa fa-angle-double-right"></i> <%= link_to "Redeem!", redeem_coupon_path(coupon), { method: :delete, :style=>'color:#FFFFFF;' } %></strong></p>
+<p class="coup-text bottom-right"><strong><i class="fa fa-paper-plane"></i> <%= link_to "Use!", redeem_coupon_path(coupon), { method: :delete, :style=>'color:#FFFFFF;' } %></strong></p>
 
 </div>
 </div>
