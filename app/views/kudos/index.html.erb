@@ -108,7 +108,7 @@
 	
 	<p class="coup-head font_resp">PRICE: <strong><%= coupon.price %></strong> points</p>
 
-	<p class="coup-text"><%= coupon.description %></p>
+	<p class="coup-text pad-bottom-sm"><%= coupon.description %></p>
 
 	<!-- Only have the option to buy if the user has enough points -->
 	<% if @user.score > coupon.price %>
