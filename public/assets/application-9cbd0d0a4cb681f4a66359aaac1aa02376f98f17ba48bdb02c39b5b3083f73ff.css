@@ -6625,7 +6625,7 @@ html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:1
 /* line 80, /Users/david_horn/Desktop/General/DH/me_and_you_R/app/assets/stylesheets/coupons.scss */
 .bottom-right {
   margin-top: 10%;
-  margin-left: 80%;
+  margin-left: 70%;
 }
 /*!
  *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -20699,11 +20699,16 @@ span.nobr {
 }
 
 /* line 58, /Users/david_horn/Desktop/General/DH/me_and_you_R/app/assets/stylesheets/users.scss */
+.pad-bottom-sm {
+  padding-bottom: 4%;
+}
+
+/* line 64, /Users/david_horn/Desktop/General/DH/me_and_you_R/app/assets/stylesheets/users.scss */
 .margin_top_sm {
   margin-top: 1%;
 }
 
-/* line 64, /Users/david_horn/Desktop/General/DH/me_and_you_R/app/assets/stylesheets/users.scss */
+/* line 70, /Users/david_horn/Desktop/General/DH/me_and_you_R/app/assets/stylesheets/users.scss */
 .all-user-box {
   background: rgba(66, 7, 16, 0.6);
   border-style: solid;
@@ -20713,7 +20718,7 @@ span.nobr {
   padding: 1%;
 }
 
-/* line 79, /Users/david_horn/Desktop/General/DH/me_and_you_R/app/assets/stylesheets/users.scss */
+/* line 85, /Users/david_horn/Desktop/General/DH/me_and_you_R/app/assets/stylesheets/users.scss */
 .search-box {
   background: rgba(255, 255, 255, 0.7);
   padding: 1%;
@@ -20722,13 +20727,13 @@ span.nobr {
   margin-right: 24%;
 }
 
-/* line 91, /Users/david_horn/Desktop/General/DH/me_and_you_R/app/assets/stylesheets/users.scss */
+/* line 97, /Users/david_horn/Desktop/General/DH/me_and_you_R/app/assets/stylesheets/users.scss */
 .box_align {
   margin-left: 46px;
   margin-top: 20px;
 }
 
-/* line 97, /Users/david_horn/Desktop/General/DH/me_and_you_R/app/assets/stylesheets/users.scss */
+/* line 103, /Users/david_horn/Desktop/General/DH/me_and_you_R/app/assets/stylesheets/users.scss */
 .match-details-box {
   height: 300px;
   background: rgba(66, 7, 16, 0.6);
@@ -20740,7 +20745,7 @@ span.nobr {
   padding-left: .7%;
 }
 
-/* line 111, /Users/david_horn/Desktop/General/DH/me_and_you_R/app/assets/stylesheets/users.scss */
+/* line 117, /Users/david_horn/Desktop/General/DH/me_and_you_R/app/assets/stylesheets/users.scss */
 .kudo-box {
   height: 260px;
   background: rgba(223, 255, 240, 0.6);
@@ -20753,7 +20758,7 @@ span.nobr {
   padding-top: 4px;
 }
 
-/* line 127, /Users/david_horn/Desktop/General/DH/me_and_you_R/app/assets/stylesheets/users.scss */
+/* line 133, /Users/david_horn/Desktop/General/DH/me_and_you_R/app/assets/stylesheets/users.scss */
 .kudo-box-points {
   float: left;
   border-right: 2px solid;
@@ -20761,7 +20766,7 @@ span.nobr {
   padding: 8px;
 }
 
-/* line 136, /Users/david_horn/Desktop/General/DH/me_and_you_R/app/assets/stylesheets/users.scss */
+/* line 142, /Users/david_horn/Desktop/General/DH/me_and_you_R/app/assets/stylesheets/users.scss */
 .kudo-box-created {
   background: rgba(223, 255, 240, 0.6);
   border-style: solid;
@@ -20773,7 +20778,7 @@ span.nobr {
   padding: .5%;
 }
 
-/* line 150, /Users/david_horn/Desktop/General/DH/me_and_you_R/app/assets/stylesheets/users.scss */
+/* line 156, /Users/david_horn/Desktop/General/DH/me_and_you_R/app/assets/stylesheets/users.scss */
 .edit_user_form {
   background: rgba(223, 255, 240, 0.6);
   padding: 2%;
