@@ -141,7 +141,7 @@
 
 <p class="white text-center font_md"><u>kudos you have given:</u></p>	
 
-<% @match_user.kudos.each do |kudo| %>
+<% @match_user.kudos.reverse_each do |kudo| %>
 <% if kudo.creator_id.to_i == @user.id %>
 <div class="kudo-box-created">
 <% if kudo.date %>
@@ -208,7 +208,7 @@
 
 <p class="font_main font_resp pad-l-5"><u>Kudos Received:</u></p>
 
-<% @recent_kudos.each do |kudo|%>
+<% @recent_kudos.reverse_each do |kudo|%>
 
 <div class="col-md-6">
  <div class="kudo-box animated fadeInUpBig">
