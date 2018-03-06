@@ -1,12 +1,16 @@
 source 'https://rubygems.org'
 
 # Declared a Ruby version
-ruby '2.2.4'
+ruby '2.5.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.3'
+gem 'rails', '~> 4.2.10'
 # Use postgresql as the database for Active Record
-gem 'pg'
+
+# gem 'pg'
+gem 'pg', "~> 0.21"
+# Rails does not support pg 1.0.0 yet
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
